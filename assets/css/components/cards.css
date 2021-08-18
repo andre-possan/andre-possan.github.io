@@ -1,0 +1,106 @@
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: inline-block;
+    box-sizing: border-box;
+
+    width: 40%;
+
+    background-color: var(--blue-20);
+
+    padding: 2rem;
+
+    border-left: var(--card-border) var(--glow-20);
+    border-radius: var(--card-border-radius);
+
+    cursor: pointer;
+
+    transition: all 350ms;
+}
+
+.card:hover { 
+    transform: translateY(-5px);
+    
+    box-shadow: var(--card-shadow) var(--glow-20);
+}
+
+.card__icon {
+    width: 50px;
+}
+
+.card__text {
+    line-height: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+.card__button {
+    margin-top: 4rem;
+}
+
+.card__link {
+    display: flex;
+    align-items: center;
+}
+
+.card--second {
+    display: flex;
+    align-items: center;
+
+    width: 30%;
+
+    padding: 1rem;
+}
+
+.card--second .title {
+    font-size: var(--text-size);
+    line-height: 2.2rem;
+
+    margin-left: .7rem;
+}
+
+/* Colors card */
+
+.card--salmon {
+    border-left: var(--card-border) var(--salmon);
+}
+
+.card--salmon:hover {
+    box-shadow: var(--card-shadow) var(--salmon);
+}
+
+.card--red {
+    border-left: var(--card-border) var(--red);
+}
+
+.card--red:hover {
+    box-shadow: var(--card-shadow) var(--red);
+}
+
+.card--lightblue {
+    border-left: var(--card-border) var(--lightblue);
+}
+
+.card--lightblue:hover {
+    box-shadow: var(--card-shadow) var(--lightblue);
+}
+
+.card--purple {
+    border-left: var(--card-border) var(--purple);
+}
+
+.card--purple:hover {
+    box-shadow: var(--card-shadow) var(--purple);
+}
+
+.card--yellow {
+    border-left: var(--card-border) var(--yellow);
+}
+
+.card--yellow:hover {
+    box-shadow: var(--card-shadow) var(--yellow);
+}

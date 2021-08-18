@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1.5rem;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__link {
+    color: var(--text-10);
+}
+
+.header__link:hover {
+    text-decoration: underline;
+}
+
+.header .button:hover {
+    text-decoration: none;
+}
+
+.header__item:nth-child(-n+2) {
+    margin-right: 2rem;
+}

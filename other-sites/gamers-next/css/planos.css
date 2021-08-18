@@ -1,0 +1,133 @@
+.planos {
+    background-color: var(--cor-fundo);
+    
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.planos__titulo {
+    color: var(--cor-primaria);
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 1.25rem;
+}
+
+.planos__cartoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--branco);
+
+    width: 100%;
+    max-width: 300px;
+
+    margin-bottom: 2rem;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 2px #00000010;
+}
+
+.cartao__titulo {
+    font-weight: 700;
+    font-size: 2.7rem;
+    text-align: center;
+
+    padding: .75rem 0;
+
+    margin-bottom: .5rem;
+
+    border-bottom: 1px solid var(--cor-fundo);
+}
+
+.cartao__conteudo {
+    padding: 0 15%;
+}
+
+.cartao__preco {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao__texto {
+    color: var(--cor-secundaria);
+
+    line-height: 28px;
+    font-size: 1.2rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.cartao__botao {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    width: 100%;
+
+    align-self: center;
+
+    padding: .75rem 2rem;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cartao--start, .cartao__botao--start {
+    color: var(--planos-cartao-start);
+}
+
+.cartao--ultra, .cartao__botao--ultra {
+    color: var(--planos-cartao-ultra);
+}
+
+.cartao--mega, .cartao__botao--mega {
+    color: var(--planos-cartao-mega);
+}
+
+.cartao__botao--start {
+    border-color: var(--planos-cartao-start);
+    border-top: 3px solid var(--planos-cartao-start-secundaria);
+    border-right: 3px solid var(--planos-cartao-start-secundaria);
+}
+
+.cartao__botao--ultra {
+    border-color: var(--planos-cartao-ultra);
+    border-top: 3px solid var(--planos-cartao-ultra-secundaria);
+    border-right: 3px solid var(--planos-cartao-ultra-secundaria);
+}
+
+.cartao__botao--mega {
+    border-color: var(--planos-cartao-mega);
+    border-top: 3px solid var(--planos-cartao-mega-secundaria);
+    border-right: 3px solid var(--planos-cartao-mega-secundaria);
+}
+
+@media screen and (min-width: 768px) {
+    .cartao {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .planos__cartoes {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .cartao {
+        max-width: 300px;
+    }
+}

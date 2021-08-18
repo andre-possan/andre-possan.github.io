@@ -1,0 +1,55 @@
+.diferenciais__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.diferenciais__item {
+    max-width: 350px;
+    box-sizing: border-box;
+
+    background-repeat: no-repeat;
+    background-position: top 2.2rem left 1rem;
+    background-size: 3.8rem;
+
+    padding: 2rem 0 2rem 5rem;
+}
+
+.diferenciais__item-qualidade {
+    background-image: url(../img/icone-servidor.svg);
+}
+
+.diferenciais__item-seguranca {
+    background-image: url(../img/icone-servidor-protegido.svg);
+}
+
+.diferenciais__item-vpn {
+    background-image: url(../img/icone-firewall.svg);
+}
+
+.item__titulo {
+    font-size: 2rem;
+    
+    color: var(--cor-secundaria);
+
+    text-align: left;
+}
+
+.item__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+
+    margin-top: 1rem;
+
+    color: var(--cor-primaria);
+}
+
+@media screen and (min-width: 1024px) {
+    .diferenciais {
+        background-color: var(--cinza-claro);
+    }
+
+    .diferenciais__lista {
+        justify-content: space-around;
+    }
+}

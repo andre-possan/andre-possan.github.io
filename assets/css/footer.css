@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    background-color: var(--blue-50);
+
+    border-top: 10px solid var(--blue-30);
+}
+
+.footer__text:first-child {
+    margin-bottom: .5rem;
+}
+
+.footer__images {
+    display: flex;
+}
+
+.footer__link {
+    font-weight: var(--text-weigth-two);
+    
+    color: white;
+    
+    text-decoration: underline;
+}
+
+.footer__image {
+    width: 2.5vw;
+    
+    margin-right: 1rem;
+}
+
+.footer__item:last-child .footer__image {
+    margin: 0;
+}

@@ -1,0 +1,58 @@
+@import url(../base/_reset.css);
+@import url(../base/_variables.css);
+
+body {
+    background: linear-gradient(158.86deg, #1C2A34 10.36%, #111A20 49.58%, #111A20 49.58%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    color: var(--text-20);
+    
+    font-family: var(--font-family);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-right: 10rem;
+    padding-left: 10rem; 
+}
+
+.title {
+    color: var(--text-10);
+
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    line-height: var(--title-size);
+}
+
+.title--two {
+    font-size: var(--title-size-two);
+}
+
+.highlight {
+    text-decoration: underline;
+}
+
+.highlight--alura {
+    color: var(--cyan);
+}
+
+.highlight--github {
+    color: var(--lightgreen);
+}
+
+.highlight--email {
+    color: var(--lightsalmon);
+}
+
+.highlight--edutech {
+    color: var(--green);
+}
+
+.highlight--vscode {
+    color: var(--blue);
+} 

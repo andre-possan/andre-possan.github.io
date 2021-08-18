@@ -1,0 +1,33 @@
+.button {
+    background-color: transparent;
+    border: 2px solid var(--blue-40);
+    border-radius: 10px;
+
+    padding: .1rem 2rem;
+
+    text-align: center;
+
+    color: var(--text-10);
+
+    font-size: var(--text-size);
+    font-family: var(--font-family);
+    font-weight: var(--button-weight);
+}
+
+.button:hover {
+    background-color: var(--blue-30);
+
+    color: var(--glow-10);
+}
+
+.button--second {
+    background-color: var(--glow-20);
+
+    border: none;
+
+    color: var(--blue-10);
+
+    font-weight: var(--button-weight-two);
+
+    padding: .4rem 1.5rem;
+}

@@ -1,0 +1,42 @@
+:root {
+    /* Colors */
+    --glow-10: #B0FBBC;
+    --glow-20: #82F9A1;
+    --text-10: #ECF8FF;
+    --text-20: #C9E2F0;
+    --blue-10: #111A20;
+    --blue-20: #1C2C35;
+    --blue-30: #243B4A;
+    --blue-40: #416883;
+    --blue-50: #5E8CA7;
+    --salmon: salmon;
+    --red: red;
+    --lightblue: lightblue;
+    --purple: purple;
+    --yellow: yellow;
+    --cyan: cyan;
+    --lightgreen: lightgreen;
+    --lightsalmon: lightsalmon;
+    --green: green;
+    --blue: #1856ae;
+    --white: white;
+
+    /* Text */
+    --font-family: 'Jost', sans-serif;
+    --title-size: 3rem;
+    --title-size-two: 1.7rem;
+    --title-weight: 700;
+    --text-size: 1.18rem;
+    --text-size-two: 1.3rem;
+    --text-weight: 300;
+    --text-weigth-two: 500;
+    --text-line: 2rem;
+    --button-weight: 400;
+    --button-weight-two: 700;
+
+    /* Cards */
+    --card-shadow: 1px 5px 30px 5px;
+    --card-border: 10px solid;
+    --card-border-radius: 10px;
+
+}

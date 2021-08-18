@@ -1,0 +1,15 @@
+.courses {
+    margin-top: 5rem;
+}
+
+.courses .card {
+    margin-bottom: 2rem;
+}
+
+.courses .card:nth-child(n+10):nth-child(-n+12) {
+    margin: 0;
+}
+
+.courses__title {
+    margin-bottom: 1rem;
+}
