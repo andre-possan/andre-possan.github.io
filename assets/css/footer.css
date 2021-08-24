@@ -11,12 +11,12 @@
     border-top: 10px solid var(--blue-30);
 }
 
-.footer__texts {
+.footer__texts-list {
     text-align: center;
 }
 
-.footer__texts li:first-child {
-    margin-bottom: .5rem;
+.footer__texts-list .footer__texts-item:first-child {
+    margin-bottom: 0.8rem;
 }
 
 .footer__images {
@@ -47,7 +47,7 @@
         flex-direction: column;
     }
 
-    .footer__texts {
+    .footer__texts-list {
         margin-bottom: 2rem;
         
     }
@@ -59,7 +59,7 @@
         flex-direction: row;
     }
 
-    .footer__texts {
+    .footer__texts-list {
         margin-bottom: 0rem;
         
     }

@@ -108,10 +108,25 @@
 
     .card--second {
         min-height: 20vh;
+        flex-grow: 1;
     }
 
     .card--second .title {
-        line-height: 1.5rem;
+        line-height: 1.4em;
+
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .card--second {
+        min-height: inherit;
+        flex-grow: 0;
+    }
+
+    .card--second .title {
+        font-size: inherit;
     }
 }
 

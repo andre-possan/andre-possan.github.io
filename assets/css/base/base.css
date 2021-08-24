@@ -38,6 +38,7 @@ a {
 
 .highlight--email {
     color: var(--lightsalmon);
+    word-break: break-all;
 }
 
 .highlight--edutech {
