@@ -1,12 +1,8 @@
-.introduction {
-    margin-top: 6rem;
-}
-
 .introduction__title {
     color: var(--glow-20);
     text-shadow: 0px 0px 40px var(--glow-20);
 
-    line-height: 4rem;
+    line-height: var(--title-line-height);
 
     transition: all 1s;
 
@@ -23,12 +19,44 @@
 }
 
 .introduction__paragraph {
-    width: 60vw;
-
     margin-top: 4rem;
+
+    text-align: justify;
 
     line-height: var(--text-line);
 
     font-weight: var(--text-weigth-two);
     font-size: var(--text-size-two);
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .introduction {
+        margin-top: 3rem;
+    }
+
+    .introduction__title {
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .introduction {
+        margin-top: 5rem;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .introduction__title {
+        text-align: start;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .introduction__paragraph {
+        width: 60vw;
+    }
 }

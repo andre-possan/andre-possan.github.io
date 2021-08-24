@@ -23,9 +23,9 @@
 
     /* Text */
     --font-family: 'Jost', sans-serif;
-    --title-size: 3rem;
-    --title-size-two: 1.7rem;
+    
     --title-weight: 700;
+    --title-line-height: 4rem;
     --text-size: 1.18rem;
     --text-size-two: 1.3rem;
     --text-weight: 300;
@@ -38,5 +38,21 @@
     --card-shadow: 1px 5px 30px 5px;
     --card-border: 10px solid;
     --card-border-radius: 10px;
+    
+}
 
+/* Mobile */
+@media screen and (min-width: 0px) {
+    :root {
+        --title-size: 2.5rem;
+        --title-size-two: 1.5rem;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    :root {
+        --title-size: 3rem;
+        --title-size-two: 1.7rem;
+    }
 }

@@ -12,11 +12,6 @@ a {
     text-decoration: none;
 }
 
-.container {
-    padding-right: 10rem;
-    padding-left: 10rem; 
-}
-
 .title {
     color: var(--text-10);
 
@@ -51,4 +46,44 @@ a {
 
 .highlight--vscode {
     color: var(--blue);
-} 
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .container {
+        padding-right: 1rem;
+        padding-left: 1rem; 
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .container {
+        padding-right: 4rem;
+        padding-left: 4rem; 
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .container {
+        padding-right: 6rem;
+        padding-left: 6rem; 
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .container {
+        padding-right: 7.5rem;
+        padding-left: 7.5rem; 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .container {
+        padding-right: 10rem;
+        padding-left: 10rem; 
+    }
+}

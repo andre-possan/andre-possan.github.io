@@ -11,7 +11,11 @@
     border-top: 10px solid var(--blue-30);
 }
 
-.footer__text:first-child {
+.footer__texts {
+    text-align: center;
+}
+
+.footer__texts li:first-child {
     margin-bottom: .5rem;
 }
 
@@ -28,11 +32,35 @@
 }
 
 .footer__image {
-    width: 2.5vw;
+    width: 3.2rem;
     
     margin-right: 1rem;
 }
 
 .footer__item:last-child .footer__image {
     margin: 0;
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer__texts {
+        margin-bottom: 2rem;
+        
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer__texts {
+        margin-bottom: 0rem;
+        
+    }
 }

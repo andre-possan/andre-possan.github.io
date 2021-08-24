@@ -11,3 +11,17 @@
     color: white;
     font-weight: var(--text-weigth-two);
 }
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .projects .card:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .projects .card:first-child {
+        margin-bottom: 0;
+    }
+}

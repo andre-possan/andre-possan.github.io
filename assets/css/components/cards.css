@@ -8,8 +8,6 @@
     display: inline-block;
     box-sizing: border-box;
 
-    width: 40%;
-
     background-color: var(--blue-20);
 
     padding: 2rem;
@@ -51,14 +49,11 @@
     display: flex;
     align-items: center;
 
-    width: 30%;
-
     padding: 1rem;
 }
 
 .card--second .title {
     font-size: var(--text-size);
-    line-height: 2.2rem;
 
     margin-left: .7rem;
 }
@@ -103,4 +98,46 @@
 
 .card--yellow:hover {
     box-shadow: var(--card-shadow) var(--yellow);
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .card {
+        width: 100%;
+    }
+
+    .card--second {
+        min-height: 20vh;
+    }
+
+    .card--second .title {
+        line-height: 1.5rem;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .card {
+        width: 45%;
+        height: inherit;
+    }
+
+    .card--second {
+        width: 45%;
+    }
+
+    .card--second .title {
+        line-height: 1.8rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .card--second {
+        width: 30%;
+    }
+
+    .card--second .title {
+        line-height: 2.2rem;
+    }
 }

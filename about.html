@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/introduction.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/components/banner-parallax.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
@@ -47,22 +48,28 @@
         </section>
         <section class="about container">
             <ul>
-                <li class="about__item">
+                <li class="banner-parallax__item">
                     <h2 class="title title--two">Utilizo o
                         <a href="https://code.visualstudio.com/" class="highlight highlight--vscode"
                             target="_blank">Visual Studio Code</a>
                         em meus projetos.
                     </h2>
-                    <div class="about__image about__image--vscode"></div>
+                    <a class="banner-parallax__image banner-parallax__image--vscode"
+                        href="https://code.visualstudio.com/" target="_blank">
+                        <img class="banner-parallax__icon" src="assets/img/icons/vscode.svg" alt="Ícone do Vs Code">
+                    </a>
                 </li>
-                <li class="about__item">
+                <li class="banner-parallax__item">
                     <h2 class="title title--two">
                         Tenho um perfil no
                         <a class="highlight highlight--github" href="https://github.com/andre-possan"
                             target="_blank">Github</a>
                         para o versionamento de código.
                     </h2>
-                    <div class="about__image about__image--github"></div>
+                    <a class="banner-parallax__image banner-parallax__image--github"
+                        href="https://github.com/andre-possan" target="_blank">
+                        <img class="banner-parallax__icon" src="assets/img/icons/github.svg" alt="Ícone do Github">
+                    </a>
                 </li>
             </ul>
         </section>
