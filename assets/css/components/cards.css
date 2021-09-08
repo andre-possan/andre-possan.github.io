@@ -121,7 +121,7 @@
 /* Tablet */
 @media screen and (min-width: 426px) {
     .card--second {
-        min-height: inherit;
+        min-height: 15vh;
         flex-grow: 0;
     }
 
@@ -149,6 +149,7 @@
 /* Desktop */
 @media screen and (min-width: 1441px) {
     .card--second {
+        min-height: 10vh;
         width: 30%;
     }
 

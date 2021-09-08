@@ -81,10 +81,3 @@
         text-align: inherit;
     }
 }
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    .banner-parallax__image--github {
-        background-position-y: 22rem;
-    }
-}
