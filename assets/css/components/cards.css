@@ -107,12 +107,12 @@
     }
 
     .card--second {
-        min-height: 20vh;
-        flex-grow: 1;
+        height: calc(10rem - 8vw);
+        overflow: hidden;
     }
 
     .card--second .title {
-        line-height: 1.4em;
+        line-height: 1.5rem;
 
         font-size: 1.1rem;
     }
@@ -120,13 +120,15 @@
 
 /* Tablet */
 @media screen and (min-width: 426px) {
-    .card--second {
-        min-height: 15vh;
-        flex-grow: 0;
-    }
-
     .card--second .title {
         font-size: inherit;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .card--second {
+        padding: 2rem;
     }
 }
 
@@ -139,6 +141,7 @@
 
     .card--second {
         width: 45%;
+        padding: 1rem;
     }
 
     .card--second .title {
@@ -149,7 +152,6 @@
 /* Desktop */
 @media screen and (min-width: 1441px) {
     .card--second {
-        min-height: 10vh;
         width: 30%;
     }
 
