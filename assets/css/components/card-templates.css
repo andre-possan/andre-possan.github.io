@@ -1,0 +1,99 @@
+/* Colors card */
+
+.card--salmon {
+    border-left: var(--card-border) var(--salmon);
+}
+
+.card--salmon:hover {
+    box-shadow: var(--card-shadow) var(--salmon);
+}
+
+.card--red {
+    border-left: var(--card-border) var(--red);
+}
+
+.card--red:hover {
+    box-shadow: var(--card-shadow) var(--red);
+}
+
+.card--lightblue {
+    border-left: var(--card-border) var(--lightblue);
+}
+
+.card--lightblue:hover {
+    box-shadow: var(--card-shadow) var(--lightblue);
+}
+
+.card--purple {
+    border-left: var(--card-border) var(--purple);
+}
+
+.card--purple:hover {
+    box-shadow: var(--card-shadow) var(--purple);
+}
+
+.card--yellow {
+    border-left: var(--card-border) var(--yellow);
+}
+
+.card--yellow:hover {
+    box-shadow: var(--card-shadow) var(--yellow);
+}
+
+/* Cards Icons */
+
+.card__icon--logica-de-programacao {
+    background-image: url("../../img/icons/logica-programacao.svg");
+}
+
+.card__icon--logica-de-programacao-dois {
+    background-image: url("../../img/icons/logica-programacao-dois.svg");
+}
+
+.card__icon--html-e-css {
+    background-image: url("../../img/icons/html5-css3.svg");
+}
+
+.card__icon--flexbox {
+    background-image: url("../../img/icons/flexbox.svg");
+}
+
+.card__icon--layouts-responsivos {
+    background-image: url("../../img/icons/layouts-responsivos.svg");
+}
+
+.card__icon--css-grid {
+    background-image: url("../../img/icons/css-grid.svg");
+}
+
+.card__icon--arquitetura-css {
+    background-image: url("../../img/icons/arquitetura-css.svg");
+}
+
+.card__icon--bootstrap {
+    background-image: url("../../img/icons/bootstrap.svg");
+}
+
+.card__icon--paginas-componentes {
+    background-image: url("../../img/icons/paginas-componentes.svg");
+}
+
+.card__icon--http {
+    background-image: url("../../img/icons/http.svg");
+}
+
+.card__icon--javascript-linguagem-web {
+    background-image: url("../../img/icons/javascript-linguagem-web.svg");
+}
+
+.card__icon--acessibilidade-web {
+    background-image: url("../../img/icons/acessibilidade-web.svg");
+}
+
+.card__icon--acessibilidade-web-2 {
+    background-image: url("../../img/icons/acessibilidade-web-2.svg");
+}
+
+.card__icon--animacao-svg {
+    background-image: url("../../img/icons/animacao-svg.svg");
+}

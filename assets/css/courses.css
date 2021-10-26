@@ -12,21 +12,14 @@
 
 /* Laptop */
 @media screen and (min-width: 769px) {
-    .courses .card:nth-child(12) {
-        margin: 0;
-    }
-}
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    .courses .card:nth-child(n+11):nth-child(-n+12) {
+    .courses .card:nth-child(17) {
         margin: 0;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
-    .courses .card:nth-child(n+10):nth-child(-n+12) {
+    .courses .card:nth-child(n+16):nth-child(-n+17) {
         margin: 0;
     }
 }
