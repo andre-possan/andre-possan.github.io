@@ -3,6 +3,14 @@
     margin-bottom: 4rem;
 }
 
+.projects .card {
+    margin-bottom: 2rem;
+}
+
+.projects .card:last-child {
+    margin-bottom: 0;
+}
+
 .projects__title {
     margin-bottom: 1rem;
 }
@@ -10,18 +18,4 @@
 .projects__link {
     color: white;
     font-weight: var(--text-weigth-two);
-}
-
-/* Mobile */
-@media screen and (min-width: 0px) {
-    .projects .card:first-child {
-        margin-bottom: 2rem;
-    }
-}
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    .projects .card:first-child {
-        margin-bottom: 0;
-    }
 }

@@ -5,7 +5,9 @@
 }
 
 .card {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
 
     background-color: var(--blue-20);
@@ -48,6 +50,8 @@
 
 .card--second {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 
     padding: 1rem;

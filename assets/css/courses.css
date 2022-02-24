@@ -10,16 +10,23 @@
     margin-bottom: 1rem;
 }
 
-/* Laptop */
-@media screen and (min-width: 769px) {
-    .courses .card:nth-child(17) {
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .courses .card:last-child {
+        margin: 0;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .courses .card:nth-last-child(-n+2) {
         margin: 0;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
-    .courses .card:nth-child(n+16):nth-child(-n+17) {
+    .courses .card:nth-last-child(-n+3) {
         margin: 0;
     }
 }

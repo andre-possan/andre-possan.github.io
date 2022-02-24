@@ -97,3 +97,7 @@
 .card__icon--animacao-svg {
     background-image: url("../../img/icons/animacao-svg.svg");
 }
+
+.card__icon--conclusao-front-end {
+    background-image: url("../../img/icons/conclusao-front-end.svg");
+}
