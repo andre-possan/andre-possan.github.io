@@ -4,6 +4,10 @@ This is my first portfolio, created to test my skills and knowledge acquired in 
 
 If you have any recommendations or want to report a bug, you can get in touch.  :grin:
 
+## To view
+
+:octocat: Go to github pages to access the page: <a href="https://andre-possan.github.io" target="_blank">andre-possan.github.io</a>
+
 ## Resources:
 
 - <a href="https://www.figma.com/community/file/824810955262478067" target="_blank">Project Figma</a>
