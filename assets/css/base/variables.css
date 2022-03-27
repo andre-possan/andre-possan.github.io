@@ -35,7 +35,7 @@
     --button-weight-two: 700;
 
     /* Cards */
-    --card-shadow: 1px 5px 30px 5px;
+    --card-shadow: 0 5px 15px 3px;
     --card-border: 10px solid;
     --card-border-radius: 10px;
     
