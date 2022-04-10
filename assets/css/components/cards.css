@@ -7,7 +7,6 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
 
     background-color: var(--blue-20);
@@ -17,7 +16,7 @@
     border-left: var(--card-border) var(--glow-20);
     border-radius: var(--card-border-radius);
 
-    cursor: pointer;
+    cursor: default;
 
     transition: all 350ms;
 }
@@ -33,19 +32,24 @@
     height: 50px;
 }
 
+.card__image {
+    border: 2px solid;
+    border-radius: var(--card-border-radius);
+    margin-top: .5rem;
+}
+
 .card__text {
+    flex-grow: 1;
+
     line-height: 1.5rem;
 
     margin-top: 1.5rem;
 }
 
 .card__button {
-    margin-top: 4rem;
-}
+    width: 4rem;
 
-.card__link {
-    display: flex;
-    align-items: center;
+    margin-top: 1rem;
 }
 
 .card--second {
@@ -55,6 +59,8 @@
     align-items: center;
 
     padding: 1rem;
+
+    cursor: pointer;
 
     overflow: hidden;
 }

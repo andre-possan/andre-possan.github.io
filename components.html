@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt=br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>André | Components</title>
+    <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/base/base.css">
     <link rel="stylesheet" href="assets/css/base/variables.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,49 +15,70 @@
     <link rel="stylesheet" href="assets/css/components/buttons.css">
     <link rel="stylesheet" href="assets/css/components/cards.css">
     <link rel="stylesheet" href="assets/css/components/card-templates.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/introduction.css">
+    <link rel="stylesheet" href="assets/css/courses.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
+
 <body>
     <button class="button" style="margin: 3rem;">Button</button>
-    
+
     <button class="button button--second" style="margin: 3rem;">Button</button>
-    
+
     <h1 class="title" style="margin: 3rem;">Title</h1>
-    
+
     <h2 class="title title--two" style="margin: 3rem;">Title Two</h2>
-    
-    <p style="margin: 3rem;">Text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio autem velit quam accusantium at!</p>
 
-    <ul class="cards container">
-        <li class="card">
-            <h3 class="title title--two">Card title</h3>
-            <p class="card__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis.</p>
-            <button class="button card__button">Button</button>
-        </li>
-        <li class="card">
-            <h3 class="title title--two">Card title</h3>
-            <p class="card__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis.</p>
-            <button class="button card__button">Button</button>
-        </li>
-    </ul>
+    <p style="margin: 3rem;">Text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio autem velit
+        quam accusantium at!</p>
 
-    <br>
-
-    <ul class="cards container">
-        <a href="https://cursos.alura.com.br/user/andre-possan">
+    <section class="projects container">
+        <h2 class="projects__title title title--two">Cards</h2>
+        <ul class="cards">
+            <li class="card card--yellow">
+                <h3 class=" title title--two">Card</h3>
+                <img src="assets/img/portfolio.jpg" class="card__image">
+                <p class="card__text">
+                    Text for card
+                </p>
+                <a href="#" class="button card__button" target="_blank">Acessar</a>
+            </li>
+            <li class="card card--red">
+                <h3 class=" title title--two">Card</h3>
+                <img src="assets/img/portfolio.jpg" class="card__image">
+                <p class="card__text">
+                    Text for card
+                </p>
+                <a href="#" class="button card__button" target="_blank">Acessar</a>
+            </li>
+            <li class="card card--lightblue">
+                <h3 class=" title title--two">Card</h3>
+                <img src="assets/img/portfolio.jpg" class="card__image">
+                <p class="card__text">
+                    Text for card
+                </p>
+                <a href="#" class="button card__button" target="_blank">Acessar</a>
+            </li>
+        </ul>
+    </section>
+    <a href="https://cursos.alura.com.br/user/andre-possan">
+        <ul class="cards container">
             <li class="card card--second card--red">
-                    <div class="card__icon card__icon--html-e-css"></div>
-                    <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
+                <div class="card__icon card__icon--html-e-css"></div>
+                <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
             </li>
             <li class="card card--second card--salmon">
-                    <div class="card__icon card__icon--logica-de-programacao-dois"></div>
-                    <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
+                <div class="card__icon card__icon--logica-de-programacao-dois"></div>
+                <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
             </li>
             <li class="card card--second">
-                    <div class="card__icon card__icon--logica-de-programacao"></div>
-                    <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
+                <div class="card__icon card__icon--logica-de-programacao"></div>
+                <h3 class="title title--two">Lógica de programação I: Os primeiros programas com Javascript e HTML</h3>
             </li>
-        </a>
         </ul>
-    
+    </a>
 </body>
+
 </html>
