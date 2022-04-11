@@ -11,7 +11,7 @@
 
     background-color: var(--blue-20);
 
-    padding: 2rem;
+    padding: 1rem 2rem;
 
     border-left: var(--card-border) var(--glow-20);
     border-radius: var(--card-border-radius);
@@ -33,7 +33,7 @@
 }
 
 .card__image {
-    border: 2px solid;
+    border: var(--card-image-border);
     border-radius: var(--card-border-radius);
     margin-top: .5rem;
 }

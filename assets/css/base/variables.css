@@ -37,6 +37,7 @@
     /* Cards */
     --card-shadow: 0 5px 15px 3px;
     --card-border: 10px solid;
+    --card-image-border: 2px solid;
     --card-border-radius: 10px;
     
 }
