@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="assets/css/introduction.css">
     <link rel="stylesheet" href="assets/css/courses.css">
     <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/components/banner-parallax.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
@@ -27,14 +30,14 @@
         <h2 class="title title--two"><a href="index.html" class="header__link">André Corso Possan</a></h2>
         <nav>
             <ul class="header__list">
-                <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
-                <li class="header__item"><a href="about.html" class="header__link">Sobre</a></li>
-                <li class="header__item"><a href="contact.html" class="header__link button">Contato</a></li>
+                <li class="header__item"><a href="#home" class="header__link">Home</a></li>
+                <li class="header__item"><a href="#about" class="header__link">Sobre</a></li>
+                <li class="header__item"><a href="#contact" class="header__link button">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="introduction container">
+        <section class="introduction container" id="home">
             <h1 class="title introduction__title">Olá, meu nome é André, estou iniciando em programação Front-End</h1>
             <p class="introduction__paragraph">Estou iniciando na carreira de programador Front-End estudando na
                 <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
@@ -172,33 +175,103 @@
                 </li>
             </ul>
         </section>
+        <section class="introduction container" id="about">
+            <h1 class="title introduction__title">Sobre mim :D</h1>
+            <p class="introduction__paragraph">
+                Sempre gostei de programação e de assistir vídeos de programadores demostrando
+                tecnologias e seus projetos, mas até então não havia realizado nenhum curso. Através do programa
+                <a href="https://www.educacao.pr.gov.br/programacao" class="highlight highlight--edutech"
+                    target="_blank">Edutech</a>
+                disponibilizado pelo governo no Paraná com parceria a
+                <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
+                    target="_blank">Alura</a>,
+                na trilha de Front-End comecei a escrever os primeiros códigos e depois de alguns meses construí este
+                portfólio com o objetivo de treinar e aprimorar minhas habilidades.
+            </p>
+        </section>
+        <section class="about container">
+            <ul>
+                <li class="banner-parallax__item">
+                    <h2 class="banner-parallax__title title title--two">Utilizo o
+                        <a href="https://code.visualstudio.com/" class="highlight highlight--vscode"
+                            target="_blank">Visual Studio Code</a>
+                        em meus projetos.
+                    </h2>
+                    <a class="banner-parallax__image banner-parallax__image--vscode"
+                        href="https://code.visualstudio.com/" target="_blank">
+                        <img class="banner-parallax__icon" src="assets/img/icons/vscode.svg" alt="Ícone do Vs Code">
+                    </a>
+                </li>
+                <li class="banner-parallax__item">
+                    <h2 class="banner-parallax__title title title--two">
+                        Tenho um perfil no
+                        <a class="highlight highlight--github" href="https://github.com/andre-possan"
+                            target="_blank">Github</a>
+                        para o versionamento de código.
+                    </h2>
+                    <a class="banner-parallax__image banner-parallax__image--github"
+                        href="https://github.com/andre-possan" target="_blank">
+                        <img class="banner-parallax__icon" src="assets/img/icons/github.svg" alt="Ícone do Github">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="introduction container">
+            <h1 class="title introduction__title">Contato</h1>
+            <p class="introduction__paragraph">
+                Você pode entrar em contato enviando um e-mail para
+                <a href="mailto:andrecorsopossan@gmail.com" class="highlight highlight--email"
+                    target="_blank">andrecorsopossan@gmail.com</a>,
+                também pode aproveitar e dar uma olhada no meu perfil no
+                <a href="https://github.com/andre-possan" class="highlight highlight--github" target="_blank">Github</a>
+                e na
+                <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
+                    target="_blank">Alura</a>.
+                Caso tenha alguma recomendação ou queira relatar um erro, adoraria que entrasse em contato! :D
+            </p>
+        </section>
+        <section class="contact container" id="contact">
+            <ul>
+                <li class="banner-parallax__item">
+                    <h2 class="banner-parallax__title title title--two">
+                        Meu email para contato:
+                        <a href="mailto:andrecorsopossan@gmail.com" class="highlight highlight--email"
+                            target="_blank">andrecorsopossan@gmail.com</a>
+                    </h2>
+                    <a class="banner-parallax__image banner-parallax__image--emails"
+                        href="mailto:andrecorsopossan@gmail.com" target="_blank">
+                        <img class="banner-parallax__icon" src="assets/img/icons/gmail.svg" alt="Ícone do Gmail">
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
     <footer class="footer container">
-        <ul class="footer__texts-list">
-            <li class="footer__texts-item">
+        <ul class="footer__texts">
+            <li class="footer__texts__item">
                 <p class="footer__text">Site desenvolvido por
                     <a class="footer__link" href="https://github.com/andre-possan" target="_blank">André Corso
                         Possan</a>
                 </p>
             </li>
-            <li class="footer__texts-item">
+            <li class="footer__texts__item">
                 <p class="footer__text">Desing inspirado em:
                     <a class="footer__link" href="https://ryan.warner.codes." target="_blank">Ryan Warner</a>
                 </p>
             </li>
         </ul>
         <ul class="footer__images">
-            <li class="footer__item">
+            <li class="footer__images__item">
                 <a href="https://github.com/andre-possan" target="_blank">
                     <img class="footer__image" src="assets/img/icons/github.svg" alt="Github icon">
                 </a>
             </li>
-            <li class="footer__item">
+            <li class="footer__images__item">
                 <a href="mailto:andrecorsopossan@gmail.com" target="_blank">
                     <img class="footer__image" src="assets/img/icons/email.svg" alt="Email icon">
                 </a>
             </li>
-            <li class="footer__item">
+            <li class="footer__images__item">
                 <a href="https://cursos.alura.com.br/user/andre-possan" target="_blank">
                     <img class="footer__image" src="assets/img/icons/alura.svg" alt="Alura icon">
                 </a>
