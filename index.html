@@ -26,15 +26,22 @@
 </head>
 
 <body>
-    <header class="header container">
-        <h2 class="title title--two"><a href="index.html" class="header__link">André Corso Possan</a></h2>
-        <nav>
-            <ul class="header__list">
-                <li class="header__item"><a href="#home" class="header__link">Home</a></li>
-                <li class="header__item"><a href="#about" class="header__link">Sobre</a></li>
-                <li class="header__item"><a href="#contact" class="header__link button">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__box container">
+            <h2 class="title title--two"><a href="index.html" class="header__link">André Corso Possan</a></h2>
+            <div class="header__mobile-menu">
+                <div class="header__mobile-menu__line"></div>
+                <div class="header__mobile-menu__line"></div>
+                <div class="header__mobile-menu__line"></div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#home" class="header__link">Home</a></li>
+                    <li class="header__item"><a href="#about" class="header__link">Sobre</a></li>
+                    <li class="header__item"><a href="#contact" class="header__link button">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="introduction container" id="home">
@@ -216,7 +223,7 @@
                 </li>
             </ul>
         </section>
-        <section class="introduction container">
+        <section class="introduction container" id="contact">
             <h1 class="title introduction__title">Contato</h1>
             <p class="introduction__paragraph">
                 Você pode entrar em contato enviando um e-mail para
@@ -230,7 +237,7 @@
                 Caso tenha alguma recomendação ou queira relatar um erro, adoraria que entrasse em contato! :D
             </p>
         </section>
-        <section class="contact container" id="contact">
+        <section class="contact container">
             <ul>
                 <li class="banner-parallax__item">
                     <h2 class="banner-parallax__title title title--two">
@@ -278,6 +285,7 @@
             </li>
         </ul>
     </footer>
+    <script src="assets/js/mobile-navbar.js"></script>
 </body>
 
 </html>

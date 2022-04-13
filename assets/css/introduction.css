@@ -36,19 +36,18 @@
 
 /* Mobile */
 @media screen and (min-width: 0px) {
-    .introduction {
-        margin-top: 3rem;
+    .introduction:first-child {
+        margin-top: 5rem;
     }
-
     .introduction__title {
         text-align: center;
     }
 }
 
-/* Tablet */
-@media screen and (min-width: 426px) {
-    .introduction {
-        margin-top: 5rem;
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .introduction:first-child {
+        margin-top: 6rem;
     }
 }
 

@@ -1,13 +1,34 @@
 .header {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 2;
+
+    background-color: var(--blue-10-transparent);
+
+    padding: .5rem 0;
+}
+
+.header__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding-top: 1.5rem;
 }
 
 .header__list {
     display: flex;
+}
+
+.header__mobile-menu__line {
+    background-color: white;
+    width: 32px;
+    height: 3px;
+}
+
+.header__mobile-menu__line:nth-child(n+2):nth-child(n) {
+    margin-top: 5px;
 }
 
 .header__link {
@@ -24,17 +45,68 @@
 
 /* Mobile */
 @media screen and (min-width: 0px) {
-    .header, .header__list {
+    .header {
+        height: 6vh;
+    }
+
+    .header__list {
         flex-direction: column;
         align-items: center;
     }
 
-    .header .title {
-        margin-bottom: 1rem;
+    .header__mobile-menu {
+        display: block;
     }
 
-    .header__list {
-        margin-top: 1rem;
+    .header__mobile-menu__line {
+        transition: 300ms;
+    }
+
+    .header__mobile-menu.active .header__mobile-menu__line:first-child {
+        transform:rotate(-45deg) translate(-6.5px, 5px);
+    }
+
+    .header__mobile-menu.active .header__mobile-menu__line:nth-child(2) {
+        background-color: red;
+        opacity: 0;
+    }
+
+    .header__mobile-menu.active .header__mobile-menu__line:last-child {
+        transform: rotate(45deg) translate(-6.5px, -5px);
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 6vh;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+
+        opacity: 0;
+        background-color: var(--blue-10-transparent);
+
+        transition: all 300ms ease-in-out;
+        transform: translateY(-160%);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    .header__nav.active {
+        z-index: -1;
+        padding: .5rem;
+        opacity: 100;
+        transform: translateY(0);
     }
 
     .header__item {
@@ -49,12 +121,32 @@
 
 /* Laptop */
 @media screen and (min-width: 769px) {
-    .header, .header__list {
+    .header {
+        height: inherit;
+        
+        border-bottom: 4px solid var(--glow-10);
+    }
+
+    .header__box,
+    .header__list {
         flex-direction: row;
     }
 
-    .header__list {
-        margin-top: 0rem;
+    .header__mobile-menu {
+        display: none;
+    }
+
+    .header__nav {
+        width: inherit;
+        
+        position: static;
+        z-index: 0;
+
+        opacity: 100;
+
+        margin-top: 0;
+
+        transform: translateY(0);
     }
 
     .header__item {
