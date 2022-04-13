@@ -1,4 +1,10 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
+
     background: linear-gradient(158.86deg, #1C2A34 1%, #111A20 40%, #111A20 10%);
 
     color: var(--text-20);
