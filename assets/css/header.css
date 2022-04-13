@@ -1,4 +1,5 @@
 .header {
+    display: inline-grid;
     position: fixed;
     top: 0;
 
