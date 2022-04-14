@@ -29,20 +29,25 @@ function addItensAnimation(itens) {
 }
 
 function changeNavBackground(attribute){
+    const classHeader = ["header--highlight-border","header--highlight-background"];
+    const classNav = ["header__nav--highlight-border", "header__nav--highlight-background"];
+
     if(attribute == "add") {
-        header.classList.add("header--highlight");
-        navList.classList.add("header__nav--highlight");
+        header.classList.add(classHeader[0],classHeader[1]);
+        navList.classList.add(classNav[0], classNav[1]);
     } else {
-        header.classList.remove("header--highlight");
-        navList.classList.remove("header__nav--highlight");
+        header.classList.remove(classHeader[0],classHeader[1]);
+        navList.classList.remove(classNav[0], classNav[1]);
     }
 }
 
 mobileMenu.addEventListener("click", () => {
     openMenu(navList)
     addItensAnimation(navItens);
+    changeNavBackground("add");
+
     if(open == true) {
-        changeNavBackground("add");
+        header.classList.remove("header--highlight-border");
     } else {
         if(window.scrollY < 20) {
             changeNavBackground("remove");
@@ -53,6 +58,9 @@ mobileMenu.addEventListener("click", () => {
 window.addEventListener("scroll", ()=> {
     if(window.scrollY > 20) {
         changeNavBackground("add");
+        if(open == true) {
+            header.classList.remove("header--highlight-border");
+        }
     } else if(open == false) {
         changeNavBackground("remove");
     }

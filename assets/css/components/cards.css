@@ -78,7 +78,7 @@
     }
 
     .card--second {
-        height: calc(10rem - 8vw);
+        height: calc(10rem - 16vw);
     }
 
     .card--second .title {
@@ -90,6 +90,9 @@
 
 /* Tablet */
 @media screen and (min-width: 426px) {
+    .card--second {
+        height: calc(10rem - 10vw);
+    }
     .card--second .title {
         font-size: inherit;
     }
@@ -98,7 +101,7 @@
 /* Laptop */
 @media screen and (min-width: 769px) {
     .card--second {
-        height: calc(10rem - 5vw);
+        height: calc(10rem - 7vw);
     }
 }
 
@@ -111,7 +114,7 @@
 
     .card--second {
         width: 45%;
-        height: calc(10rem - 2vw);
+        height: calc(10rem - 4vw);
     }
 
     .card--second .title {
@@ -123,6 +126,7 @@
 @media screen and (min-width: 1441px) {
     .card--second {
         width: 30%;
+        height: calc(10rem - 2.5vw);
     }
 
     .card--second .title {
