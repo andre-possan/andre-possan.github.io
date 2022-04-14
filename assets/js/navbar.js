@@ -1,7 +1,17 @@
 const header = document.querySelector(".header");
-const mobileMenu = document.querySelector(".header__mobile-menu");
-const navList = document.querySelector(".header__nav");
-const navItens = document.querySelectorAll(".header__item");
+const mobileMenu = document.querySelector(".header__nav__mobile-menu");
+const navList = document.querySelector(".header__nav__list");
+const navItens = document.querySelectorAll(".header__nav__list__item");
+
+function changeNavBackground(attribute) {
+    const classHeader = "header--highlight";
+
+    if (attribute == "add") {
+        header.classList.add(classHeader);
+    } else {
+        header.classList.remove(classHeader);
+    }
+}
 
 let open = false;
 function openMenu(navList) {
@@ -9,10 +19,18 @@ function openMenu(navList) {
         navList.classList.add("active");
         mobileMenu.classList.add("active");
 
+        
+        navList.classList.add("header__background--highlight");
+        changeNavBackground("add");
+
         open = true;
     } else {
         navList.classList.remove("active");
         mobileMenu.classList.remove("active");
+
+        if(window.scrollY < 20) {
+            changeNavBackground("remove");
+        }
 
         open = false;
     }
@@ -20,7 +38,7 @@ function openMenu(navList) {
 
 function addItensAnimation(itens) {
     itens.forEach((item, index) => {
-        if(item.style.animation != "") {
+        if (item.style.animation != "") {
             item.style.animation = "";
         } else {
             item.style.animation = `navLinkFade 500ms ease forwards ${index / 8}s`;
@@ -28,40 +46,21 @@ function addItensAnimation(itens) {
     });
 }
 
-function changeNavBackground(attribute){
-    const classHeader = ["header--highlight-border","header--highlight-background"];
-    const classNav = ["header__nav--highlight-border", "header__nav--highlight-background"];
-
-    if(attribute == "add") {
-        header.classList.add(classHeader[0],classHeader[1]);
-        navList.classList.add(classNav[0], classNav[1]);
-    } else {
-        header.classList.remove(classHeader[0],classHeader[1]);
-        navList.classList.remove(classNav[0], classNav[1]);
-    }
-}
-
 mobileMenu.addEventListener("click", () => {
     openMenu(navList)
     addItensAnimation(navItens);
-    changeNavBackground("add");
 
     if(open == true) {
-        header.classList.remove("header--highlight-border");
+        header.classList.add("header--border-none");
     } else {
-        if(window.scrollY < 20) {
-            changeNavBackground("remove");
-        }
+        header.classList.remove("header--border-none");
     }
 })
 
-window.addEventListener("scroll", ()=> {
-    if(window.scrollY > 20) {
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
         changeNavBackground("add");
-        if(open == true) {
-            header.classList.remove("header--highlight-border");
-        }
-    } else if(open == false) {
+    } else if (open == false) {
         changeNavBackground("remove");
     }
 })

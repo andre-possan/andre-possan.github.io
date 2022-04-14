@@ -1,5 +1,4 @@
 .header {
-    display: inline-grid;
     position: fixed;
     top: 0;
 
@@ -7,37 +6,42 @@
 
     z-index: 2;
 
-    padding: .5rem 0;
-
-    transition: 300ms;
-}
-
-.header__nav--highlight-border, .header--highlight-border {
-    border-bottom: 4px solid var(--glow-10);
-}
-
-.header__nav--highlight-background, .header--highlight-background {
-    background-color: var(--blue-10-transparent);
+    transition: 100ms ease-in-out;
 }
 
 .header__box {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 
-.header__list {
-    display: flex;
+.header__background--highlight {
+    background-color: var(--blue-10-transparent);
 }
 
-.header__mobile-menu__line {
+.header--highlight {
+    border-bottom: 4px solid var(--glow-10);
+    background-color: var(--blue-10-transparent);
+}
+
+.header--border-none {
+    border: none;
+}
+
+.header__nav__mobile-menu__line {
     background-color: white;
     width: 32px;
     height: 3px;
 }
 
-.header__mobile-menu__line:nth-child(n+2):nth-child(n) {
+.header__nav__mobile-menu__line:nth-child(n+2):nth-child(n) {
     margin-top: 5px;
+}
+
+.header__nav__list {
+    display: flex;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid var(--glow-10);
 }
 
 .header__link {
@@ -54,39 +58,40 @@
 
 /* Mobile */
 @media screen and (min-width: 0px) {
-    .header {
+    .header__box {
         height: 6vh;
+
+        padding-top: .3rem;
+        padding-bottom: .3rem;
     }
 
-    .header__list {
+    .header__nav__list {
         flex-direction: column;
         align-items: center;
-
-        padding: 1rem;
     }
 
-    .header__mobile-menu {
+    .header__nav__mobile-menu {
         display: block;
     }
 
-    .header__mobile-menu__line {
-        transition: 300ms;
+    .header__nav__mobile-menu__line {
+        transition: 300ms ease-in-out;
     }
 
-    .header__mobile-menu.active .header__mobile-menu__line:first-child {
+    .header__nav__mobile-menu.active .header__nav__mobile-menu__line:first-child {
         transform:rotate(-45deg) translate(-6.5px, 5px);
     }
 
-    .header__mobile-menu.active .header__mobile-menu__line:nth-child(2) {
+    .header__nav__mobile-menu.active .header__nav__mobile-menu__line:nth-child(2) {
         background-color: red;
         opacity: 0;
     }
 
-    .header__mobile-menu.active .header__mobile-menu__line:last-child {
+    .header__nav__mobile-menu.active .header__nav__mobile-menu__line:last-child {
         transform: rotate(45deg) translate(-6.5px, -5px);
     }
 
-    .header__nav {
+    .header__nav__list {
         position: absolute;
         top: 6vh;
         right: 0;
@@ -95,23 +100,22 @@
 
         opacity: 0;
 
-        transition: all 300ms ease-in-out;
-        transform: translateY(-160%);
+        transition: 300ms ease-in-out;
+        transform: translateY(-130%);
     }
 
-    .header__nav.active {
+    .header__nav__list.active {
         z-index: -1;
-        padding: .5rem;
         opacity: 100;
         transform: translateY(0);
     }
 
-    .header__item {
+    .header__nav__list__item {
         margin-bottom: 2rem;
         margin-right: 0;
     }
 
-    .header__item:last-child {
+    .header__nav__list__item:last-child {
         margin-bottom: 0;
     }
 }
@@ -120,23 +124,18 @@
 @media screen and (min-width: 769px) {
     .header {
         height: inherit;
-        padding: 1rem;
     }
 
-    .header__box,
-    .header__list {
+    .header,
+    .header__nav__list {
         flex-direction: row;
     }
 
-    .header__list {
-        padding: inherit;
-    }
-
-    .header__mobile-menu {
+    .header__nav__mobile-menu {
         display: none;
     }
 
-    .header__nav {
+    .header__nav__list {
         width: inherit;
         
         position: static;
@@ -147,25 +146,24 @@
         background: none;
         border: none;
 
+        padding: 0;
         margin-top: 0;
 
         transform: translateY(0);
     }
 
-    .header__item {
+    .header__nav__list__item {
         margin-bottom: 0;
     }
 
-    .header__item:nth-child(-n+2) {
+    .header__nav__list__item:nth-child(-n+2) {
         margin-right: 2rem;
     }
 }
 
 /* Laptop Large */
 @media screen and (min-width: 1025px) {
-    .header {
-        padding: .5rem;
-    }
+    
 }
 
 @keyframes navLinkFade {
