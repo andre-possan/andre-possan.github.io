@@ -113,7 +113,6 @@
     }
 
     .card--second {
-        width: 45%;
         height: calc(10rem - 4vw);
     }
 
@@ -124,8 +123,11 @@
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
-    .card--second {
+    .card {
         width: 30%;
+    }
+
+    .card--second {
         height: calc(10rem - 2.5vw);
     }
 
