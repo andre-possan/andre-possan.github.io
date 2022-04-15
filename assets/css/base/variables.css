@@ -40,7 +40,10 @@
     --card-border: 10px solid;
     --card-image-border: 2px solid;
     --card-border-radius: 10px;
-    
+
+    /* Header */
+    --header-border: 4px solid var(--glow-10);
+    --header-background: #040C11;
 }
 
 /* Mobile */
