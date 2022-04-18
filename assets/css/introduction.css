@@ -25,27 +25,6 @@
     opacity: 0.5;
 }
 
-.introduction__title {
-    color: var(--glow-20);
-
-    text-shadow: 0px 0px 40px var(--glow-20);
-
-    line-height: var(--title-line-height);
-
-    transition: all 1s;
-
-    cursor: default;
-}
-
-.introduction__title:hover {
-    text-shadow: 0px 0px 20px var(--glow-20);
-}
-
-.introduction__title:active {
-    text-shadow: 0px 0px 20px red;
-    color: red;
-}
-
 #introduction__title-typing::after {
     content: "|";
     color: white;
@@ -108,7 +87,12 @@
 
 /* Mobile */
 @media screen and (min-width: 0px) {
+    .introduction {
+        margin: 2rem 0;
+    }
+
     .introduction__title {
+        height: 25vh;
         text-align: center;
     }
 
@@ -135,6 +119,10 @@
 
 /* Laptop */
 @media screen and (min-width: 769px) {
+    .introduction__title {
+        height: 20vh;
+    }
+
     .introduction__content-box {
         justify-content: space-between;
         flex-direction: row;
@@ -148,20 +136,26 @@
 /* Laptop Large */
 @media screen and (min-width: 1025px) {
     .introduction__title {
+        height: 15vh;
         text-align: start;
     }
+
     .introduction__subtitle {
         padding-left: .5rem;
     }
+
     .introduction__content-box {
         justify-content: flex-start;
     }
+
     .introduction__skills, .introduction__profiles {
         width: 17vw;
     }
+
     .introduction__skills {
         margin-right: 4rem;
     }
+
     .introduction__list {
         padding-left: 1rem;
     }
@@ -169,6 +163,11 @@
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
+    .introduction__title {
+        height: 7vh;
+        text-align: start;
+    }
+
     .introduction__paragraph {
         width: 60vw;
     }

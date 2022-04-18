@@ -33,6 +33,27 @@ a {
     font-size: var(--title-size-two);
 }
 
+.title--highlight {
+    color: var(--glow-20);
+
+    text-shadow: 0px 0px 40px var(--glow-20);
+
+    line-height: var(--title-line-height);
+
+    cursor: default;
+
+    transition: all 1s;
+}
+
+.title--highlight:hover {
+    text-shadow: 0px 0px 20px var(--glow-20);
+}
+
+.title--highlight:active {
+    text-shadow: 0px 0px 20px red;
+    color: red;
+}
+
 .highlight {
     text-decoration: underline;
 }
