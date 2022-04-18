@@ -5,7 +5,8 @@ html {
 
 body {
 
-    background: linear-gradient(158.86deg, #1C2A34 1%, #111A20 40%, #111A20 10%);
+    background-color: #111A20;
+    /* background: linear-gradient(158.86deg, #1C2A34 1%, #111A20 40%, #111A20 10%); */
 
     color: var(--text-20);
     
@@ -78,21 +79,5 @@ a {
     .container {
         padding-right: 6rem;
         padding-left: 6rem; 
-    }
-}
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    .container {
-        padding-right: 7.5rem;
-        padding-left: 7.5rem; 
-    }
-}
-
-/* Desktop */
-@media screen and (min-width: 1441px) {
-    .container {
-        padding-right: 10rem;
-        padding-left: 10rem; 
     }
 }

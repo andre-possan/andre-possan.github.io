@@ -45,16 +45,66 @@
     </header>
     <main>
         <section class="introduction container" id="home">
-            <h1 class="title introduction__title">Olá, meu nome é André, estou iniciando em programação Front-End</h1>
+            <h1 class="title introduction__title">Olá, meu nome é André, <span id="introduction__title-typing"></span></h1>
             <p class="introduction__paragraph">Estou iniciando na carreira de programador Front-End estudando na
                 <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
+                    target="_blank">Alura</a>, demonstro meus projetos no
+                <a href="https://github.com/andre-possan" class="highlight highlight--github"
+                    target="_blank">Github</a>. Atualmente estou matriculado no 2⁰ ano do ensino médio, e pretendo cursar Engenharia
+                Elétrica.
+                <ul class="introduction__content-box">
+                    <li class="introduction__skills">
+                        <h3 class="introduction__subtitle">Minhas Habilidades:</h3>
+                        <ul class="introduction__list">
+                            <li>
+                                <img class="introduction__list__icon" src="assets/img/icons/html.svg">
+                            </li>
+                            <li>
+                                <img class="introduction__list__icon" src="assets/img/icons/css.svg">
+                            </li>
+                            <li>
+                                <img class="introduction__list__icon" src="assets/img/icons/js.svg">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="introduction__profiles">
+                        <h3 class="introduction__subtitle">Meus perfis:</h3>
+                        <ul class="introduction__list">
+                                <li>
+                                    <a href="https://github.com/andre-possan" target="_blank">
+                                        <img class="introduction__list__icon" src="assets/img/icons/github-green.svg">
+                                    </a>
+                                </li>
+                            <li>
+                                <a href="mailto:andrecorsopossan@gmail.com" target="_blank">
+                                    <img class="introduction__list__icon" src="assets/img/icons/email-green.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cursos.alura.com.br/user/andre-possan" target="_blank">
+                                    <img class="introduction__list__icon" src="assets/img/icons/alura-green.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            <video class="introduction__video" autoplay muted loop>
+                <source src="assets/video/matrix-background.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="container" id="about">
+            <h1 class="title">Sobre mim :D</h1>
+            <p class="introduction__paragraph">
+                Sempre gostei de programação e de assistir vídeos de programadores demostrando
+                tecnologias e seus projetos, mas até então não havia realizado nenhum curso. Através do programa
+                <a href="https://www.educacao.pr.gov.br/programacao" class="highlight highlight--edutech"
+                    target="_blank">Edutech</a>
+                disponibilizado pelo governo no Paraná com parceria a
+                <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
                     target="_blank">Alura</a>,
-                utilizo o
-                <a href="https://github.com/andre-possan" class="highlight highlight--github" target="_blank">Github</a>
-                para enviar meus projetos pessoais. Para entrar em contato basta enviar um
-                e-mail:
-                <a href="mailto:andrecorsopossan@gmail.com" class="highlight highlight--email"
-                    target="_blank">andrecorsopossan@gmail.com</a>.
+                na trilha de Front-End comecei a escrever os primeiros códigos e depois de alguns meses construí este
+                portfólio com o objetivo de treinar e aprimorar minhas habilidades.
             </p>
         </section>
         <section class="courses container">
@@ -184,49 +234,8 @@
                 </li>
             </ul>
         </section>
-        <section class="introduction container" id="about">
-            <h1 class="title introduction__title">Sobre mim :D</h1>
-            <p class="introduction__paragraph">
-                Sempre gostei de programação e de assistir vídeos de programadores demostrando
-                tecnologias e seus projetos, mas até então não havia realizado nenhum curso. Através do programa
-                <a href="https://www.educacao.pr.gov.br/programacao" class="highlight highlight--edutech"
-                    target="_blank">Edutech</a>
-                disponibilizado pelo governo no Paraná com parceria a
-                <a href="https://cursos.alura.com.br/user/andre-possan" class="highlight highlight--alura"
-                    target="_blank">Alura</a>,
-                na trilha de Front-End comecei a escrever os primeiros códigos e depois de alguns meses construí este
-                portfólio com o objetivo de treinar e aprimorar minhas habilidades.
-            </p>
-        </section>
-        <section class="about container">
-            <ul>
-                <li class="banner-parallax__item">
-                    <h2 class="banner-parallax__title title title--two">Utilizo o
-                        <a href="https://code.visualstudio.com/" class="highlight highlight--vscode"
-                            target="_blank">Visual Studio Code</a>
-                        em meus projetos.
-                    </h2>
-                    <a class="banner-parallax__image banner-parallax__image--vscode"
-                        href="https://code.visualstudio.com/" target="_blank">
-                        <img class="banner-parallax__icon" src="assets/img/icons/vscode.svg" alt="Ícone do Vs Code">
-                    </a>
-                </li>
-                <li class="banner-parallax__item">
-                    <h2 class="banner-parallax__title title title--two">
-                        Tenho um perfil no
-                        <a class="highlight highlight--github" href="https://github.com/andre-possan"
-                            target="_blank">Github</a>
-                        para o versionamento de código.
-                    </h2>
-                    <a class="banner-parallax__image banner-parallax__image--github"
-                        href="https://github.com/andre-possan" target="_blank">
-                        <img class="banner-parallax__icon" src="assets/img/icons/github.svg" alt="Ícone do Github">
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="introduction container" id="contact">
-            <h1 class="title introduction__title">Contato</h1>
+        <section class="container" id="contact">
+            <h1 class="title">Contato</h1>
             <p class="introduction__paragraph">
                 Você pode entrar em contato enviando um e-mail para
                 <a href="mailto:andrecorsopossan@gmail.com" class="highlight highlight--email"
@@ -288,6 +297,7 @@
         </ul>
     </footer>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/introduction-typing.js"></script>
 </body>
 
 </html>

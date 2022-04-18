@@ -37,11 +37,11 @@ function openMenu(navList) {
 }
 
 function addItensAnimation(itens) {
-    itens.forEach((item, index) => {
+    itens.forEach((item, i) => {
         if (item.style.animation != "") {
             item.style.animation = "";
         } else {
-            item.style.animation = `navLinkFade 500ms ease forwards ${index / 8}s`;
+            item.style.animation = `navLinkFade 500ms ease forwards ${i / 8}s`;
         }
     });
 }
