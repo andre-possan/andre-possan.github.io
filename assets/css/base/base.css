@@ -1,18 +1,31 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+
+    overflow-x: hidden;
 }
 
 body {
-
-    background-color: #111A20;
-    /* background: linear-gradient(158.86deg, #1C2A34 1%, #111A20 40%, #111A20 10%); */
-
     color: var(--text-20);
     
     font-family: var(--font-family);
     font-size: var(--text-size);
     font-weight: var(--text-weight);
+}
+
+::-webkit-scrollbar {
+    background: var(--blue-30);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glow-20);
+    border-radius: 5px;    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--glow-10);
+    box-shadow: 0 0 10px var(--glow-10);
 }
 
 a {
@@ -54,6 +67,16 @@ a {
     color: red;
 }
 
+.paragraph {
+    margin-top: 2rem;
+    padding-left: .5rem;
+
+    line-height: var(--text-line);
+
+    font-weight: var(--text-weigth-two);
+    font-size: var(--text-size-two);
+}
+
 .highlight {
     text-decoration: underline;
 }
@@ -81,6 +104,10 @@ a {
 
 /* Mobile */
 @media screen and (min-width: 0px) {
+    body {
+        background: linear-gradient(158.86deg, #1C2A34 1%, #111A20 40%, #111A20 10%);
+    }
+
     .container {
         padding-right: 1rem;
         padding-left: 1rem; 
@@ -97,8 +124,19 @@ a {
 
 /* Laptop */
 @media screen and (min-width: 769px) {
+    body {
+        background: #111A20 ;
+    }
+
     .container {
         padding-right: 6rem;
         padding-left: 6rem; 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .paragraph {
+        width: 60vw;
     }
 }
