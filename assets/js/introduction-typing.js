@@ -43,13 +43,9 @@ function transformArrayToString(text, element, addition){
 }
 
 function typeRemove(element, list, i) {
-    if ((list[i]).indexOf("gosto") != -1) {
-        if(list[i+1] != undefined && list[i+1].indexOf("gosto") != -1) {
-            const text = element.innerHTML.split("gosto de");
-            transformArrayToString(text[1], element, "gosto de");
-        } else {
-            transformArrayToString(element.innerHTML, element);
-        }
+    if ((list[i]).indexOf("gosto") != -1 && list[i+1] != undefined && list[i+1].indexOf("gosto") != -1) {
+        const text = element.innerHTML.split("gosto de");
+        transformArrayToString(text[1], element, "gosto de");
     } else {
         transformArrayToString(element.innerHTML, element);
     }

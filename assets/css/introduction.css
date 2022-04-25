@@ -51,7 +51,7 @@
 .introduction__content-box {
     display: flex;
 
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .introduction__list {
@@ -95,6 +95,10 @@
     .introduction__skills, .introduction__profiles {
         width: 55vw;
     }
+
+    .introduction__skills {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Tablet */
@@ -125,6 +129,10 @@
 
     .introduction__skills, .introduction__profiles {
         width: 25vw;
+    }
+
+    .introduction__skills {
+        margin-bottom: 0;
     }
 }
 
