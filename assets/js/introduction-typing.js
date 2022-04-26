@@ -9,8 +9,8 @@ const delayToWritePhrase = delayToWriteCharacter * 80;
 const delayToRestart = delayToWritePhrase * words.length;
 
 
-function typeWrite(element, list,i) { 
-    if(list[i-1] != undefined && list[i].indexOf("gosto de") != -1 &&  list[i-1].indexOf("gosto de") != -1) {
+function textWrite(element, list,i) { 
+    if(list[i-1] != undefined && list[i].indexOf("gosto de") != -1 && list[i-1].indexOf("gosto de") != -1) {
         const text = list[i].split("gosto de");
         var textArray = text[1].split("");
     } else {
@@ -22,7 +22,7 @@ function typeWrite(element, list,i) {
     });
 }
 
-function transformArrayToString(text, element, addition){
+function textWriteReverse(text, element, addition){
         const textArray = text.split("")
         textArray.reverse();
     
@@ -42,22 +42,22 @@ function transformArrayToString(text, element, addition){
         });
 }
 
-function typeRemove(element, list, i) {
+function textRemove(element, list, i) {
     if ((list[i]).indexOf("gosto") != -1 && list[i+1] != undefined && list[i+1].indexOf("gosto") != -1) {
         const text = element.innerHTML.split("gosto de");
-        transformArrayToString(text[1], element, "gosto de");
+        textWriteReverse(text[1], element, "gosto de");
     } else {
-        transformArrayToString(element.innerHTML, element);
+        textWriteReverse(element.innerHTML, element);
     }
 }
 
 function main() {
     for (let i = 0; i < words.length; i++) {
         setTimeout(() => {
-            typeWrite(title, words, i);
+            textWrite(title, words, i);
 
             setTimeout(() => {
-                typeRemove(title, words, i);
+                textRemove(title, words, i);
             }, delayToWritePhrase / 2)
         }, delayToWritePhrase * i)
     }
