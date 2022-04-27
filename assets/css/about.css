@@ -1,4 +1,82 @@
-.about {
-    margin-top: 5rem;
+.about__career {
+    margin-top: 2rem;
+}
+
+.about__career__professional__title {
+    position: relative;
+}
+
+.about__career__professional__title::before {
+    content: "»";
+
+    position: absolute;
+    left: -20px;
+}
+
+.about__career__professional__projects {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about__career__professional__projects .card {
+    margin-bottom: 2rem;
+}
+
+.about__career__professional__projects__title {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about__career__professional__projects__title::before {
+    content: "-";
+    margin-right: .5rem;
+}
+
+.about__career__professional__projects__link {
+    color: white;
+    font-weight: var(--text-weigth-thee);
+}
+
+.about__career__professional__courses {
     margin-bottom: 5rem;
+}
+
+.about__career__professional__courses .card {
+    margin-bottom: 2rem;
+}
+
+.about__career__professional__courses__title {
+    margin-bottom: 1rem;
+}
+
+.about__career__personal {
+    margin-bottom: 4rem;
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .about__career__professional__projects .card:last-child {
+        margin-bottom: 0;
+    }
+
+    .about__career__professional__courses .card:last-child {
+        margin: 0;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    .about__career__professional__courses .card:nth-last-child(-n+2) {
+        margin: 0;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .about__career__professional__projects .card {
+        margin-bottom: 0;
+    }
+    .about__career__professional__courses .card:nth-last-child(-n+3) {
+        margin: 0;
+    }
 }

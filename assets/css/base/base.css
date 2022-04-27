@@ -68,7 +68,7 @@ a {
 }
 
 .paragraph {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-left: .5rem;
 
     line-height: var(--text-line);
