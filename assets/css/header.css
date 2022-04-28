@@ -156,7 +156,7 @@
         margin-bottom: 0;
     }
 
-    .header__nav__list__item:nth-child(-n+2) {
+    .header__nav__list__item:nth-child(-n+3) {
         margin-right: 2rem;
     }
 }

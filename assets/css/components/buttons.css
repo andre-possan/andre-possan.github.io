@@ -29,5 +29,12 @@
 
     font-weight: var(--button-weight-two);
 
-    padding: .4rem 1.5rem;
+    padding: .6rem 1.5rem;
+
+    transition: 200ms;
+}
+
+.button--second:hover {
+    box-shadow: 0px 0px 15px var(--glow-20);
+    background-color: var(--blue-20-trasparent);
 }

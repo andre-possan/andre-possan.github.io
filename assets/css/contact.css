@@ -1,4 +1,47 @@
 .contact {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--blue-30);
+    border-top: 10px solid var(--blue-20);
+
+    text-align: center;
+
+    padding: 6rem 0;
+}
+
+.contact__title {
+    margin-bottom: 3rem;
+}
+
+.contact__paragraph {
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.contact__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact__button:hover
+.contact__button__icon {
+    display: none;
+}
+
+.contact__button:hover
+.contact__button__icon--green {
+    display: block;
+}
+
+.contact__button__icon {
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+
+.contact__button__icon--green {
+    display: none;
 }

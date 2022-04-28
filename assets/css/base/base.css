@@ -79,6 +79,8 @@ a {
 
 .highlight {
     text-decoration: underline;
+
+    font-weight: var(--text-weigth-thee);
 }
 
 .highlight--alura {

@@ -3,14 +3,12 @@
     justify-content: space-around;
     align-items: center;
 
-    margin-top: 5rem;
-
     padding-top: 2rem;
     padding-bottom: 2rem;
 
     background-color: var(--blue-50);
 
-    border-top: 10px solid var(--blue-30);
+    border-top: 10px solid var(--blue-40);
 }
 
 .footer__texts {
