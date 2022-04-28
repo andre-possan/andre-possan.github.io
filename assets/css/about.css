@@ -15,21 +15,26 @@
 
 .about__career__professional__projects {
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .about__career__professional__projects .card {
     margin-bottom: 2rem;
 }
 
-.about__career__professional__projects__title {
-    margin-left: 1rem;
+.about__career__professional__projects__title,
+.about__career__professional__courses__title {
+    position: relative;
+
     margin-bottom: 1rem;
 }
 
-.about__career__professional__projects__title::before {
+.about__career__professional__projects__title::before,
+.about__career__professional__courses__title::before {
+    position: absolute;
+    left: -10px;
+
     content: "-";
-    margin-right: .5rem;
 }
 
 .about__career__professional__projects__link {
@@ -45,8 +50,54 @@
     margin-bottom: 2rem;
 }
 
-.about__career__professional__courses__title {
-    margin-bottom: 1rem;
+.about__career__professional__courses__paragraph {
+    margin-bottom: 2rem;
+}
+
+@property --gradient-color1 {
+    syntax: '<color>';
+    initial-value: #82F9A1;
+    inherits: false;
+}
+
+@property --gradient-color2 {
+    syntax: '<color>';
+    initial-value: green;
+    inherits: false;
+}
+
+.about__career__professional__courses__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+
+    background: 
+    linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
+    linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)) border-box;
+    border-radius: 1em;
+    border: 4px solid transparent;
+
+    transition: --gradient-color1 1s, --gradient-color2 1s, border-radius 1s;
+}
+
+.about__career__professional__courses__link:hover {
+    border-radius: 2rem;
+    --gradient-color1: blue;
+    --gradient-color2: red;
+}
+
+.about__career__professional__courses__link:hover .about__career__professional__courses__alura-icon {
+    transform: translateY(-5px);
+}
+
+.about__career__professional__courses__alura-icon {
+    width: 10rem;
+
+    margin-bottom: 2rem;
+
+    transition: 200ms;
 }
 
 .about__career__personal {

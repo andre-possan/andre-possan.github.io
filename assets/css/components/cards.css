@@ -78,7 +78,7 @@
     }
 
     .card--second {
-        height: calc(10rem - 16vw);
+        height: calc(10rem - 9vw);
     }
 
     .card--second .title {
