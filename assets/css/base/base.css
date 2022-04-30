@@ -1,7 +1,6 @@
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-
+    scroll-padding: 80px;
     overflow-x: hidden;
 }
 

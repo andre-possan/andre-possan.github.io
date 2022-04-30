@@ -9,16 +9,15 @@
 
     text-align: center;
 
-    padding: 6rem 0;
-}
+    padding: 4rem 0;
 
-.contact__title {
-    margin-bottom: 3rem;
+    height: 30vh;
+
+    scroll-margin-top: calc(70vh - 8rem - 80px);
 }
 
 .contact__paragraph {
     margin-top: 0;
-    margin-bottom: 3rem;
 }
 
 .contact__button {
@@ -27,21 +26,20 @@
     justify-content: space-evenly;
 }
 
-.contact__button:hover
-.contact__button__icon {
-    display: none;
-}
-
-.contact__button:hover
-.contact__button__icon--green {
-    display: block;
-}
-
 .contact__button__icon {
     width: 1.5rem;
+    height: 1.5rem;
     margin-right: .5rem;
+
+    background-image: url(../img/icons/email2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 200ms;
 }
 
-.contact__button__icon--green {
-    display: none;
+.contact__button:hover
+.contact__button__icon {
+    background-image: url(../img/icons/email2-green.svg);
 }

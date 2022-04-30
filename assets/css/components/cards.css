@@ -36,6 +36,23 @@
     border: var(--card-image-border);
     border-radius: var(--card-border-radius);
     margin-top: .5rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 13rem;
+}
+
+.card__image--portfolio {
+    background-image: url(../../img/portfolio.jpg);
+}
+
+.card__image--tvonline {
+    background-image: url(../../img/tvonline.jpg);
+}
+
+.card__image--gamersnext {
+    background-image: url(../../img/gamersnext.jpg);
 }
 
 .card__text {
@@ -100,6 +117,10 @@
 
 /* Laptop */
 @media screen and (min-width: 769px) {
+    .card {
+        width: 45%;
+        height: inherit;
+    }
     .card--second {
         height: calc(10rem - 7vw);
     }
@@ -107,11 +128,6 @@
 
 /* Laptop Large */
 @media screen and (min-width: 1025px) {
-    .card {
-        width: 45%;
-        height: inherit;
-    }
-
     .card--second {
         height: calc(10rem - 4vw);
     }
