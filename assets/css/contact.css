@@ -10,10 +10,6 @@
     text-align: center;
 
     padding: 4rem 0;
-
-    height: 30vh;
-
-    scroll-margin-top: calc(70vh - 8rem - 80px);
 }
 
 .contact__paragraph {
@@ -42,4 +38,20 @@
 .contact__button:hover
 .contact__button__icon {
     background-image: url(../img/icons/email2-green.svg);
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .contact {
+        height: 40vh;
+        scroll-margin-top: calc(60vh - 8rem - 80px);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .contact {
+        height: 30vh;
+        scroll-margin-top: calc(70vh - 8rem - 80px);
+    }
 }

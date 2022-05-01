@@ -11,7 +11,7 @@
 
     background-color: var(--blue-20);
 
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
 
     border-left: var(--card-border) var(--glow-20);
     border-radius: var(--card-border-radius);
@@ -35,12 +35,11 @@
 .card__image {
     border: var(--card-image-border);
     border-radius: var(--card-border-radius);
-    margin-top: .5rem;
 
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 13rem;
+    height: 7rem;
 }
 
 .card__image--portfolio {
