@@ -1,133 +1,105 @@
-.about__career {
-    margin-top: 2rem;
-}
-
-.about__career__professional__title {
-    position: relative;
-}
-
-.about__career__professional__title::before {
-    content: "»";
-
-    position: absolute;
-    left: -20px;
-}
-
-.about__career__professional__projects {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-
-.about__career__professional__projects .card {
-    margin-bottom: 2rem;
-}
-
-.about__career__professional__projects__title,
-.about__career__professional__courses__title {
-    position: relative;
-
-    margin-bottom: 1rem;
-}
-
-.about__career__professional__projects__title::before,
-.about__career__professional__courses__title::before {
-    position: absolute;
-    left: -10px;
-
-    content: "-";
-}
-
-.about__career__professional__projects__link {
-    color: white;
-    font-weight: var(--text-weigth-thee);
-}
-
-.about__career__professional__courses {
-    margin-bottom: 5rem;
-}
-
-.about__career__professional__courses .card {
-    margin-bottom: 2rem;
-}
-
-.about__career__professional__courses__paragraph {
-    margin-bottom: 2rem;
-}
-
-@property --gradient-color1 {
-    syntax: '<color>';
-    initial-value: #82F9A1;
-    inherits: false;
-}
-
-@property --gradient-color2 {
-    syntax: '<color>';
-    initial-value: green;
-    inherits: false;
-}
-
-.about__career__professional__courses__link {
+.about {
     display: flex;
-    flex-direction: column;
     align-items: center;
-
-    padding: 1rem;
-
-    background: 
-    linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
-    linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)) border-box;
-    border-radius: 1em;
-    border: 4px solid transparent;
-
-    transition: --gradient-color1 1s, --gradient-color2 1s, border-radius 1s;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-.about__career__professional__courses__link:hover {
-    border-radius: 2rem;
-    --gradient-color1: blue;
-    --gradient-color2: red;
+.about__images {
+    position: relative;
 }
 
-.about__career__professional__courses__link:hover .about__career__professional__courses__alura-icon {
-    transform: translateY(-5px);
+.about__image {
+    background: url(../img/hacker-mind.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    background-color: var(--blue-50);
+    border-radius: 100%;
+
+    width: 28rem;
+    height: 28rem;
+
+    box-shadow: 0 0 30px var(--blue-40);
 }
 
-.about__career__professional__courses__alura-icon {
-    width: 10rem;
+.about__image--small {
+    position: absolute;
 
-    margin-bottom: 2rem;
+    width: 3rem;
+    height: 4rem;
 
     transition: 200ms;
 }
 
-.about__career__personal {
-    margin-bottom: 4rem;
+.about__image--small:hover {
+    transform: scale(1.1);
+}
+
+.about__image--small-html {
+    top: 20px;
+    left: 10px;
+    background: url(../img/icons/html.svg) no-repeat;
+}
+
+.about__image--small-css {
+    top: 80px;
+    left: -30px;
+    background: url(../img/icons/css.svg) no-repeat;
+}
+
+.about__image--small-js {
+    top: 150px;
+    left: -60px;
+    background: url(../img/icons/js.svg) no-repeat;
+}
+
+.about__image--small-figma {
+    top: 220px;
+    left: -60px;
+    background: url(../img/icons/figma.svg) no-repeat;
+}
+
+.about__image--small-animation {
+    background: url(../img/icons/code.svg) no-repeat;
+    background-size: cover;
+
+    top: 0;
+    left: 40px;
+
+    width: 5rem;
+    height: 5rem;
+
+    animation: imageAnimation 7s infinite ease-in-out;
+}
+
+.about__career {
+    margin-top: 2rem;
 }
 
 /* Mobile */
 @media screen and (min-width: 0px) {
-    .about__career__professional__projects .card:last-child {
-        margin-bottom: 0;
-    }
-
-    .about__career__professional__courses .card:last-child {
-        margin: 0;
-    }
-}
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    .about__career__professional__courses .card:nth-last-child(-n+2) {
-        margin: 0;
+    .about {
+        flex-direction: column;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
-    .about__career__professional__projects .card {
-        margin-bottom: 0;
+    .about {
+        flex-direction: row;
     }
-    .about__career__professional__courses .card:nth-last-child(-n+3) {
-        margin: 0;
+}
+
+@keyframes imageAnimation {
+    0% {
+        transform: translateX(-2rem);
+    }
+    50% {
+        transform: translateX(22rem) translateY(25rem);
+    }
+    100% {
+        transform: translateX(-2rem);
     }
 }

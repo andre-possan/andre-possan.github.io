@@ -6,6 +6,8 @@
     height: 100vh;
 
     z-index: 1;
+
+    scroll-margin-top: 80px;
 }
 
 .introduction__video {
@@ -51,7 +53,7 @@
 .introduction__content-box {
     display: flex;
 
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .introduction__list {
@@ -145,7 +147,7 @@
     }
 
     .introduction__skills {
-        margin-right: 2rem;
+        margin-right: 6rem;
     }
 }
 

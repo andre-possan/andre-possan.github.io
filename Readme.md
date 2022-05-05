@@ -1,4 +1,4 @@
-# My Portfolio
+# My Portfolio <img aling="center" alt="css" height="35" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"><img aling="center" alt="html" height="35" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"><img aling="center" alt="js" height="35" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg">
 
 This is my first portfolio, created to test my skills and knowledge acquired in courses taken, using standards such as Atomic Design and BEM!, was inspired by <a href="https://ryan.warner.codes." target="_blank">Ryan Warner.</a>
 

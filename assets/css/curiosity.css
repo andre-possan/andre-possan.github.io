@@ -1,0 +1,103 @@
+.curiosity {
+    display: flex;
+    align-items: center;
+
+    height: 20vw;
+    background: linear-gradient(var(--glow-20), var(--glow-10) 50%);
+}
+
+.curiosity__item {
+    position: relative;
+
+    animation: itemMove 15s infinite ease-in-out
+}
+
+.curiosity__item:hover {
+    animation-play-state: paused;
+}
+
+.curiosity__item:active .curiosity__item__image {
+    animation-play-state: paused;
+
+    background: url(../img/robot-laser.svg);
+    background-repeat: no-repeat;
+
+    width: 22rem;
+}
+
+.curiosity__item__image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background: url(../img/robot-up.svg);
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 8rem;
+    animation: itemAnimation 1s steps(1) infinite both;
+}
+
+.curiosity__item__image:last-child {
+    background: url(../img/robot-down.svg);
+    background-repeat: no-repeat;
+
+    animation: itemAnimation2 1s steps(1) infinite both;
+}
+
+@keyframes itemAnimation {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes itemAnimation2 {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+}
+
+@keyframes itemMove {
+    from {}
+}
+
+@keyframes itemMove {
+    0% {
+        -webkit-transform: translateX(-15vw);
+        transform: translateX(-15vw)
+    }
+
+    35% {
+        -webkit-transform: translate(35vw);
+        transform: translate(35vw)
+    }
+
+    40% {
+        -webkit-transform: translate(35vw);
+        transform: translate(35vw)
+    }
+
+    70% {
+        -webkit-transform: translate(75vw);
+        transform: translate(75vw)
+    }
+
+    75% {
+        -webkit-transform: translate(75vw);
+        transform: translate(75vw)
+    }
+
+    100% {
+        -webkit-transform: translate(110vw);
+        transform: translate(110vw)
+    }
+}
