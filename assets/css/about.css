@@ -5,8 +5,9 @@
     height: 100vh;
 }
 
-.about__images {
+.about__image-and-skills {
     position: relative;
+    font-size: 16px;
 }
 
 .about__image {
@@ -16,75 +17,90 @@
     background-position: center;
 
     background-color: var(--blue-50);
-    border-radius: 100%;
+    border-radius: 50%;
 
-    width: 28rem;
-    height: 28rem;
+    width: 28em;
+    height: 28em;
 
     box-shadow: 0 0 30px var(--blue-40);
 
     transition: 400ms;
 }
 
-.about__image:hover {
+.about__image-and-skills:hover
+.about__image {
     box-shadow: 0 0 35px var(--glow-20);
 
     background-color: var(--glow-20);
 }
+.about__image-and-skills:hover
+.about__skills,
+.about__image-and-skills:hover
+.about__skills__image {
+    animation-play-state: paused;
+}
 
-.about__image--small {
+.about__skills {
+    position: absolute;
+    top: 0;
+    left: 45%;
+
+    height: 28em;
+
+    /* transform: rotate(270deg) ; */
+    animation: rotateImage 20s infinite linear;
+}
+
+.about__skills__image {
     position: absolute;
 
-    width: 3rem;
-    height: 3rem;
+    width: 3.5em;
+    height: 3.5em;
 
     transition: 200ms;
+
+    /* transform: rotate(-270deg); */
+    animation: rotateIcon 20s infinite reverse linear;
 }
 
-.about__image--small:hover {
-    transform: scale(1.1);
-}
-
-.about__image--small-animation {
+.about__skills__image-animation {
     background: url(../img/icons/code.svg) no-repeat;
     background-size: cover;
 
     top: 0;
-    right: 70px;
+    right: -10em;
 
-    width: 5rem;
-    height: 5rem;
+    width: 5em;
+    height: 5em;
 
-    animation: imageAnimation 7s infinite ease-in-out;
+    animation: imageAnimation 10s infinite ease-in-out;
 }
 
-.about__image--small-html {
-    top: 20px;
-    left: 10px;
+.about__skills__image-html {
+    top: -2.9em;
     background: url(../img/icons/html.svg) no-repeat;
 }
 
-.about__image--small-css {
-    top: 80px;
-    left: -30px;
+.about__skills__image-css {
+    bottom: -3em;
     background: url(../img/icons/css.svg) no-repeat;
 }
 
-.about__image--small-js {
-    top: 150px;
-    left: -60px;
+.about__skills__image-js {
+    top: 50%;
+    left: 15.5em;
     background: url(../img/icons/js.svg) no-repeat;
 }
 
-.about__image--small-figma {
-    top: 220px;
-    left: -60px;
+.about__skills__image-figma {
+    top: 50%;
+    left: -15.5em;
     background: url(../img/icons/figma.svg) no-repeat;
 }
 
-.about__image--small-git {
-    top: 285px;
-    left: -50px;
+.about__skills__image-git {
+    top: 10%;
+    right: -14.5em;
     background: url(../img/icons/git.svg) no-repeat;
 }
 
@@ -108,12 +124,40 @@
 
 @keyframes imageAnimation {
     0% {
-        transform: translateX(2rem);
+        transform: translateX(2em) translateY(-2em);
     }
     50% {
-        transform: translateX(-22rem) translateY(22rem);
+        transform: translateX(-22em) translateY(20em);
     }
     100% {
-        transform: translateX(2rem);
+        transform: translateX(2em) translateY(-2em);
+    }
+}
+
+@keyframes rotateIcon {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg) translateX(-1.4em) translateY(-1.4em);
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-2.5em) translateY(0);
+    }
+
+    75% {
+        transform: rotate(270deg) translateX(-1.5em) translateY(1.1em);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
