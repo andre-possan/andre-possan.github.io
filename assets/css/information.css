@@ -1,4 +1,4 @@
-.curiosity {
+.information {
     display: flex;
     align-items: center;
 
@@ -6,17 +6,17 @@
     background: linear-gradient(var(--glow-20), var(--glow-10) 50%);
 }
 
-.curiosity__item {
+.information__item-animation {
     position: relative;
 
     animation: itemMove 15s infinite ease-in-out
 }
 
-.curiosity__item:hover {
+.information__item-animation:hover {
     animation-play-state: paused;
 }
 
-.curiosity__item:active .curiosity__item__image {
+.information__item-animation:active .information__item-animation__image {
     animation-play-state: paused;
 
     background: url(../img/robot-laser.svg);
@@ -25,7 +25,7 @@
     width: 22rem;
 }
 
-.curiosity__item__image {
+.information__item-animation__image {
     position: absolute;
 
     top: 0;
@@ -38,7 +38,7 @@
     animation: itemAnimation 1s steps(1) infinite both;
 }
 
-.curiosity__item__image:last-child {
+.information__item-animation__image:last-child {
     background: url(../img/robot-down.svg);
     background-repeat: no-repeat;
 
@@ -64,10 +64,6 @@
         opacity: 1;
         transform: translateY(5px);
     }
-}
-
-@keyframes itemMove {
-    from {}
 }
 
 @keyframes itemMove {

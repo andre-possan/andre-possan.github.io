@@ -5,6 +5,10 @@
     height: 100vh;
 }
 
+.about__texts__button {
+    margin-top: 2rem;
+}
+
 .about__image-and-skills {
     position: relative;
     font-size: 16px;
@@ -27,16 +31,14 @@
     transition: 400ms;
 }
 
-.about__image-and-skills:hover
-.about__image {
+.about__image-and-skills:hover .about__image {
     box-shadow: 0 0 35px var(--glow-20);
 
     background-color: var(--glow-20);
 }
-.about__image-and-skills:hover
-.about__skills,
-.about__image-and-skills:hover
-.about__skills__image {
+
+.about__image-and-skills:hover .about__skills,
+.about__image-and-skills:hover .about__skills__item {
     animation-play-state: paused;
 }
 
@@ -47,11 +49,10 @@
 
     height: 28em;
 
-    /* transform: rotate(270deg) ; */
-    animation: rotateImage 20s infinite linear;
+    animation: rotateSkillsList 20s infinite linear;
 }
 
-.about__skills__image {
+.about__skills__item {
     position: absolute;
 
     width: 3.5em;
@@ -59,53 +60,35 @@
 
     transition: 200ms;
 
-    /* transform: rotate(-270deg); */
-    animation: rotateIcon 20s infinite reverse linear;
+    animation: rotateSkillIcon 20s infinite reverse linear;
 }
 
-.about__skills__image-animation {
-    background: url(../img/icons/code.svg) no-repeat;
-    background-size: cover;
-
-    top: 0;
-    right: -10em;
-
-    width: 5em;
-    height: 5em;
-
-    animation: imageAnimation 10s infinite ease-in-out;
-}
-
-.about__skills__image-html {
+.about__skills__item--html {
     top: -2.9em;
     background: url(../img/icons/html.svg) no-repeat;
 }
 
-.about__skills__image-css {
+.about__skills__item--css {
     bottom: -3em;
     background: url(../img/icons/css.svg) no-repeat;
 }
 
-.about__skills__image-js {
+.about__skills__item--js {
     top: 50%;
     left: 15.5em;
     background: url(../img/icons/js.svg) no-repeat;
 }
 
-.about__skills__image-figma {
+.about__skills__item--figma {
     top: 50%;
     left: -15.5em;
     background: url(../img/icons/figma.svg) no-repeat;
 }
 
-.about__skills__image-git {
+.about__skills__item--git {
     top: 10%;
     right: -14.5em;
     background: url(../img/icons/git.svg) no-repeat;
-}
-
-.about__career {
-    margin-top: 2rem;
 }
 
 /* Mobile */
@@ -122,25 +105,13 @@
     }
 }
 
-@keyframes imageAnimation {
-    0% {
-        transform: translateX(2em) translateY(-2em);
-    }
-    50% {
-        transform: translateX(-22em) translateY(20em);
-    }
-    100% {
-        transform: translateX(2em) translateY(-2em);
-    }
-}
-
-@keyframes rotateIcon {
+@keyframes rotateSkillIcon {
     to {
         transform: rotate(360deg);
     }
 }
 
-@keyframes rotateImage {
+@keyframes rotateSkillsList {
     0% {
         transform: rotate(0);
     }

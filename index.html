@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/components/card-templates.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/introduction.css">
-    <link rel="stylesheet" href="assets/css/curiosity.css">
+    <link rel="stylesheet" href="assets/css/information.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/components/banner-parallax.css">
     <link rel="stylesheet" href="assets/css/contact.css">
@@ -101,15 +101,32 @@
                 <source src="assets/video/matrix-background.mp4" type="video/mp4">
             </video>
         </section>
-        <section class="curiosity">
-            <div class="curiosity__item">
-                <div class="curiosity__item__image"></div>
-                <div class="curiosity__item__image"></div>
+        <section class="information">
+            <ul class="information__list">
+                <li class="information__list__card">
+                    <div class="information__list__card__icon"></div>
+                    <h4 class="title"></h4>
+                    <p class="paragraph"></p>
+                </li>
+                <li class="information__list__card">
+                    <div class="information__list__card__icon"></div>
+                    <h4 class="title"></h4>
+                    <p class="paragraph"></p>
+                </li class="information__list__card">
+                <li>
+                    <div class="information__list__card__icon"></div>
+                    <h4 class="title"></h4>
+                    <p class="paragraph"></p>
+                </li>
+            </ul>
+            <div class="information__item-animation">
+                <div class="information__item-animation__image"></div>
+                <div class="information__item-animation__image"></div>
             </div>
         </section>
         <section class="about container" id="about">
-            <div>
-                <h1 class="about__title title title--highlight">Sobre mim :D</h1>
+            <div class="about__texts">
+                <h1 class="title title--highlight">Sobre mim :D</h1>
                 <div class="divider"></div>
                 <p class="paragraph">
                     Sempre gostei de programação e de assistir vídeos de programadores demostrando
@@ -123,17 +140,17 @@
                     este
                     portfólio com o objetivo de treinar e aprimorar minhas habilidades.
                 </p>
+                <a href="#projects" class="about__texts__button button button--second">Meus projetos</a>
             </div>
             <div class="about__image-and-skills">
                 <div class="about__image"></div>
-                <div class="about__skills">
-                    <!-- <div class="about__skills__image about__skills__image-animation"></div> -->
-                    <div class="about__skills__image about__skills__image-html"></div>
-                    <div class="about__skills__image about__skills__image-css"></div>
-                    <div class="about__skills__image about__skills__image-js"></div>
-                    <div class="about__skills__image about__skills__image-figma"></div>
-                    <div class="about__skills__image about__skills__image-git"></div>
-                </div>
+                <ul class="about__skills">
+                    <li class="about__skills__item about__skills__item--html"></li>
+                    <li class="about__skills__item about__skills__item--css"></li>
+                    <li class="about__skills__item about__skills__item--js"></li>
+                    <li class="about__skills__item about__skills__item--figma"></li>
+                    <li class="about__skills__item about__skills__item--git"></li>
+                </ul>
             </div>
         </section>
 
