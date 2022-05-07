@@ -65,30 +65,30 @@
 
 .about__skills__item--html {
     top: -2.9em;
-    background: url(../img/icons/html.svg) no-repeat;
+    background: url(../img/icons/html.svg);
 }
 
 .about__skills__item--css {
     bottom: -3em;
-    background: url(../img/icons/css.svg) no-repeat;
+    background: url(../img/icons/css.svg);
 }
 
 .about__skills__item--js {
     top: 50%;
     left: 15.5em;
-    background: url(../img/icons/js.svg) no-repeat;
+    background: url(../img/icons/js.svg);
 }
 
 .about__skills__item--figma {
     top: 50%;
     left: -15.5em;
-    background: url(../img/icons/figma.svg) no-repeat;
+    background: url(../img/icons/figma.svg);
 }
 
 .about__skills__item--git {
     top: 10%;
     right: -14.5em;
-    background: url(../img/icons/git.svg) no-repeat;
+    background: url(../img/icons/git.svg);
 }
 
 /* Mobile */
