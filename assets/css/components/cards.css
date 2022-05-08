@@ -194,6 +194,8 @@
 @media screen and (min-width: 769px) {
     .card {
         width: 45%;
+
+        height: inherit;
     }
 
     .card--second {
