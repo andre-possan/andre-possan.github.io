@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/introduction.css">
     <link rel="stylesheet" href="assets/css/information.css">
     <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="assets/css/components/banner-parallax.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -102,7 +102,7 @@
                 <source src="assets/video/matrix-background.mp4" type="video/mp4">
             </video>
         </section>
-        <section class="information">
+        <section class="information container">
             <ul class="information__list">
                 <li class="information__list__card">
                     <div class="information__list__card__icon information__list__card__icon--about-me"></div>
@@ -116,26 +116,26 @@
                     </div>
                     <h4 class="information__list__card__title title">Experiência profissional</h4>
                     <p class="information__list__card__paragraph paragraph">Estou estudando para alcançar uma vaga como
-                        desenvolvedor Front-End</p>
+                        desenvolvedor Front-End.</p>
                 </li>
                 <li class="information__list__card">
                     <div class="information__list__card__icon information__list__card__icon--study"></div>
                     <h4 class="information__list__card__title title">Estudo</h4>
                     <p class="information__list__card__paragraph paragraph">Atualmente estou matriculado no 2⁰ ano do
                         ensino médio, e estudo programação na <a href="https://cursos.alura.com.br/user/andre-possan"
-                            class="highlight highlight--alura" target="_blank">Alura</a></p>
+                            class="highlight highlight--alura" target="_blank">Alura</a>.</p>
                 </li>
             </ul>
-            <div class="information__item-animation">
+            <!-- <div class="information__item-animation">
                 <div class="information__item-animation__image"></div>
                 <div class="information__item-animation__image"></div>
-            </div>
+            </div> -->
         </section>
         <section class="about container" id="about">
             <div class="about__texts">
                 <h1 class="title title--highlight">Sobre mim :D</h1>
                 <div class="divider"></div>
-                <p class="paragraph">
+                <p class="about__texts__paragraph paragraph">
                     Sempre gostei de programação e de assistir vídeos de programadores demostrando
                     tecnologias e seus projetos, mas até então não havia realizado nenhum curso. Através do programa
                     <a href="https://www.educacao.pr.gov.br/programacao" class="highlight highlight--edutech"
@@ -160,7 +160,92 @@
                 </ul>
             </div>
         </section>
-
+        <section class="projects container" id="projects">
+            <h3 class="title title--highlight" id="projects">Meus projetos</h3>
+            <div class="divider"></div>
+            <p class="paragraph">Projetos realizados para estudo e treinamentos.</p>
+            <ul class="projects__cards cards">
+                <li class="card card--red card--portfolio">
+                    <div class="card__content">
+                        <h4 class="card__title title title--two">Portfólio</h4>
+                        <div class="card__content__without-title">
+                            <p class="card__text">
+                                Este é meu primeiro portfólio, criado para testar minhas
+                                habilidades e conhecimentos adquiridos nos cursos realizados, utilizando padrões
+                                como
+                                <a href="https://bradfrost.com/blog/post/atomic-web-design/"
+                                    class="projects__link highlight" target="_blank">Atomic Design</a>
+                                e
+                                <a href="https://en.bem.info/methodology/" class="projects__link highlight"
+                                    target="_blank">BEM</a>!
+                            </p>
+                            <div class="card__technologies">
+                                <h5 class="card__technologies__title">Tecnologias Utilizadas</h5>
+                                <ul class="card__technologies__list">
+                                    <li class="card__technologies__list__item card__technologies__list__item--html">
+                                    </li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--css"></li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--js"></li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/andre-possan/andre-possan.github.io" class="button card__button"
+                                target="_blank">Acessar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="card card--purple card--tvonline">
+                    <div class="card__content">
+                        <h4 class="card__title  title title--two">Tv Online</h4>
+                        <div class="card__content__without-title">
+                            <p class="card__text">
+                                Site de televisão aberta desenvolvido para a empresa <a href="https://www.gcu.com.br"
+                                    class="projects__link highlight" target="_blank">Gcu net</a> com a
+                                finalidade de
+                                atender
+                                seus clientes com vários canais de televisão e rádios ao vivo! Utilizei <a
+                                    href="https://nodejs.org/en/" class="projects__link highlight" target="_blank">Node
+                                    js</a>
+                                para atualizar frequentemente o link das transmissões e garantir disponibilidade
+                                24h!
+                            </p>
+                            <div class="card__technologies">
+                                <h5 class="card__technologies__title">Tecnologias Utilizadas</h5>
+                                <ul class="card__technologies__list">
+                                    <li class="card__technologies__list__item card__technologies__list__item--html">
+                                    </li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--css"></li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--js"></li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--nodejs">
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="https://viajemais.inf.br" class="button card__button" target="_blank">Acessar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="card card--yellow card--gamersnext">
+                    <div class="card__content">
+                        <h3 class="card__title title title--two">Gamers Next</h3>
+                        <div class="card__content__without-title">
+                            <p class="card__text">
+                                Um site para uma empresa fictícia, onde o objetivo era
+                                tornar a página responsiva atendendo todos os tamanhos de telas!
+                            </p>
+                            <div class="card__technologies">
+                                <h5 class="card__technologies__title">Tecnologias Utilizadas</h5>
+                                <ul class="card__technologies__list">
+                                    <li class="card__technologies__list__item card__technologies__list__item--html">
+                                    </li>
+                                    <li class="card__technologies__list__item card__technologies__list__item--css"></li>
+                                </ul>
+                            </div>
+                            <a href="https://andre-possan.github.io/gamers-next/" class="button card__button"
+                                target="_blank">Acessar</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
         <section class="contact container" id="contact">
             <h1 class="contact__title title title--highlight">Vamos trabalhar juntos?</h1>
             <p class="contact__paragraph paragraph">Me envie um email :D <a class="highlight highlight--email"

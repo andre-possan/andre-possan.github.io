@@ -1,8 +1,6 @@
 .about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100vh;
 }
 
 .about__texts__button {
@@ -11,7 +9,6 @@
 
 .about__image-and-skills {
     position: relative;
-    font-size: 16px;
 }
 
 .about__image {
@@ -91,20 +88,6 @@
     background: url(../img/icons/git.svg);
 }
 
-/* Mobile */
-@media screen and (min-width: 0px) {
-    .about {
-        flex-direction: column;
-    }
-}
-
-/* Desktop */
-@media screen and (min-width: 1441px) {
-    .about {
-        flex-direction: row;
-    }
-}
-
 @keyframes rotateSkillIcon {
     to {
         transform: rotate(360deg);
@@ -130,5 +113,75 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .about {
+        flex-direction: column;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .about__texts {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 4rem;
+    }
+    .about__texts__button {
+        align-self: center;
+    }
+    .about__image-and-skills {
+        font-size: 8px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .about {
+        padding-bottom: 5rem;
+    }
+    .about__image-and-skills {
+        font-size: 12px;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .about__texts__button {
+        align-self: flex-start;
+    }
+}
+
+/* Laptop Large */
+@media screen and (min-width: 1025px) {
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .about {
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .about__texts {
+        margin: 0;
+    }
+
+    .about__texts__paragraph {
+        max-width: 55vw;
+    }
+    .about__image-and-skills {
+        font-size: 16px;
     }
 }

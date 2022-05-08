@@ -58,6 +58,7 @@
 
 .introduction__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -66,7 +67,7 @@
     width: 45px;
     height: 45px;
 
-    margin-right: 20px;
+    margin-right: 10px;
 
     transition: 200ms;
 }
@@ -82,7 +83,7 @@
 /* Mobile */
 @media screen and (min-width: 0px) {
     .introduction {
-        margin: 2rem 0;
+        margin-top: 2rem;
         background: none;
     }
 
