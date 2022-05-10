@@ -41,7 +41,7 @@
     background: var(--blue-10-transparent);
     backdrop-filter: blur(5px);
 
-    transition: 300ms;
+    transition: 500ms;
 }
 
 .card__content__without-title {
@@ -208,15 +208,14 @@
 
     .card__content__without-title {
         opacity: 0;
-        transition: 300ms;
     }
-
+    
     .card:hover .card__content {
         height: calc(100% - 2rem);
     }
-
+    
     .card:hover .card__content__without-title {
-        opacity: 1;
+        animation: cardTextFade 600ms forwards;
     }
 }
 
@@ -247,5 +246,17 @@
 
     .card--second .title {
         line-height: 2.2rem;
+    }
+}
+
+@keyframes cardTextFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
