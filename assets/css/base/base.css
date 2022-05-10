@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    scroll-padding: 80px;
     overflow-x: hidden;
 }
 
@@ -66,8 +65,14 @@ a {
     color: red;
 }
 
+.divider {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--glow-10), var(--blue-10))
+}
+
 .paragraph {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding-left: .5rem;
 
     line-height: var(--text-line);
@@ -126,7 +131,7 @@ a {
 /* Laptop */
 @media screen and (min-width: 769px) {
     body {
-        background: #111A20 ;
+        background: var(--blue-10);
     }
 
     .container {
@@ -138,6 +143,6 @@ a {
 /* Desktop */
 @media screen and (min-width: 1441px) {
     .paragraph {
-        width: 60vw;
+        max-width: 60vw;
     }
 }

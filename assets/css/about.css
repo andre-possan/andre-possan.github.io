@@ -1,133 +1,187 @@
-.about__career {
-    margin-top: 2rem;
-}
-
-.about__career__professional__title {
-    position: relative;
-}
-
-.about__career__professional__title::before {
-    content: "»";
-
-    position: absolute;
-    left: -20px;
-}
-
-.about__career__professional__projects {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-
-.about__career__professional__projects .card {
-    margin-bottom: 2rem;
-}
-
-.about__career__professional__projects__title,
-.about__career__professional__courses__title {
-    position: relative;
-
-    margin-bottom: 1rem;
-}
-
-.about__career__professional__projects__title::before,
-.about__career__professional__courses__title::before {
-    position: absolute;
-    left: -10px;
-
-    content: "-";
-}
-
-.about__career__professional__projects__link {
-    color: white;
-    font-weight: var(--text-weigth-thee);
-}
-
-.about__career__professional__courses {
-    margin-bottom: 5rem;
-}
-
-.about__career__professional__courses .card {
-    margin-bottom: 2rem;
-}
-
-.about__career__professional__courses__paragraph {
-    margin-bottom: 2rem;
-}
-
-@property --gradient-color1 {
-    syntax: '<color>';
-    initial-value: #82F9A1;
-    inherits: false;
-}
-
-@property --gradient-color2 {
-    syntax: '<color>';
-    initial-value: green;
-    inherits: false;
-}
-
-.about__career__professional__courses__link {
+.about {
     display: flex;
-    flex-direction: column;
     align-items: center;
-
-    padding: 1rem;
-
-    background: 
-    linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
-    linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)) border-box;
-    border-radius: 1em;
-    border: 4px solid transparent;
-
-    transition: --gradient-color1 1s, --gradient-color2 1s, border-radius 1s;
 }
 
-.about__career__professional__courses__link:hover {
-    border-radius: 2rem;
-    --gradient-color1: blue;
-    --gradient-color2: red;
+.about__texts__button {
+    margin-top: 2rem;
 }
 
-.about__career__professional__courses__link:hover .about__career__professional__courses__alura-icon {
-    transform: translateY(-5px);
+.about__image-and-skills {
+    position: relative;
 }
 
-.about__career__professional__courses__alura-icon {
-    width: 10rem;
+.about__image {
+    background: url(../img/hacker-mind.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 
-    margin-bottom: 2rem;
+    background-color: var(--blue-50);
+    border-radius: 50%;
+
+    width: 28em;
+    height: 28em;
+
+    box-shadow: 0 0 30px var(--blue-40);
+
+    transition: 400ms;
+}
+
+.about__image-and-skills:hover .about__image {
+    box-shadow: 0 0 35px var(--glow-20);
+
+    background-color: var(--glow-20);
+}
+
+.about__image-and-skills:hover .about__skills,
+.about__image-and-skills:hover .about__skills__item {
+    animation-play-state: paused;
+}
+
+.about__skills {
+    position: absolute;
+    top: 0;
+    left: 45%;
+
+    height: 28em;
+
+    animation: rotateSkillsList 20s infinite linear;
+}
+
+.about__skills__item {
+    position: absolute;
+
+    width: 3.5em;
+    height: 3.5em;
 
     transition: 200ms;
+
+    animation: rotateSkillIcon 20s infinite reverse linear;
 }
 
-.about__career__personal {
-    margin-bottom: 4rem;
+.about__skills__item--html {
+    top: -2.9em;
+    background: url(../img/icons/html.svg);
+}
+
+.about__skills__item--css {
+    bottom: -3em;
+    background: url(../img/icons/css.svg);
+}
+
+.about__skills__item--js {
+    top: 50%;
+    left: 15.5em;
+    background: url(../img/icons/js.svg);
+}
+
+.about__skills__item--figma {
+    top: 50%;
+    left: -15.5em;
+    background: url(../img/icons/figma.svg);
+}
+
+.about__skills__item--git {
+    top: 10%;
+    right: -14.5em;
+    background: url(../img/icons/git.svg);
+}
+
+@keyframes rotateSkillIcon {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSkillsList {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg) translateX(-1.4em) translateY(-1.4em);
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-2.5em) translateY(0);
+    }
+
+    75% {
+        transform: rotate(270deg) translateX(-1.5em) translateY(1.1em);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Mobile */
 @media screen and (min-width: 0px) {
-    .about__career__professional__projects .card:last-child {
-        margin-bottom: 0;
-    }
+    .about {
+        flex-direction: column;
 
-    .about__career__professional__courses .card:last-child {
-        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .about__texts {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 4rem;
+    }
+    .about__texts__button {
+        align-self: center;
+    }
+    .about__image-and-skills {
+        font-size: 8px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+    .about {
+        padding-bottom: 5rem;
+    }
+    .about__image-and-skills {
+        font-size: 12px;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+    .about__texts__button {
+        align-self: flex-start;
     }
 }
 
 /* Laptop Large */
 @media screen and (min-width: 1025px) {
-    .about__career__professional__courses .card:nth-last-child(-n+2) {
-        margin: 0;
-    }
+    
 }
 
 /* Desktop */
 @media screen and (min-width: 1441px) {
-    .about__career__professional__projects .card {
-        margin-bottom: 0;
+    .about {
+        height: 100vh;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding-top: 0;
+        padding-bottom: 0;
     }
-    .about__career__professional__courses .card:nth-last-child(-n+3) {
+    .about__texts {
         margin: 0;
+    }
+
+    .about__texts__paragraph {
+        max-width: 55vw;
+    }
+    .about__image-and-skills {
+        font-size: 16px;
     }
 }

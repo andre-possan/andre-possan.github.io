@@ -1,0 +1,31 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    margin-bottom: 5rem;
+}
+
+.projects__cards {
+    margin-top: 2rem;
+}
+
+/* Mobile */
+@media screen and (min-width: 0px) {
+    .projects {
+        margin-top: 4rem;
+
+        scroll-margin-top: 60px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1441px) {
+    .projects {
+        height: 100vh;
+        margin-top: 0;
+
+        scroll-margin-top: 0;
+    }
+}

@@ -44,7 +44,7 @@
 @media screen and (min-width: 0px) {
     .contact {
         height: 40vh;
-        scroll-margin-top: calc(60vh - 8rem - 80px);
+        scroll-margin-top: calc(60vh - 8rem);
     }
 }
 
@@ -52,6 +52,6 @@
 @media screen and (min-width: 426px) {
     .contact {
         height: 30vh;
-        scroll-margin-top: calc(70vh - 8rem - 80px);
+        scroll-margin-top: calc(70vh - 8rem);
     }
 }
