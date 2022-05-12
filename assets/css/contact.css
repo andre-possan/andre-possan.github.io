@@ -1,7 +1,7 @@
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     background-color: var(--blue-30);
@@ -51,7 +51,7 @@
 /* Tablet */
 @media screen and (min-width: 426px) {
     .contact {
-        height: 30vh;
-        scroll-margin-top: calc(70vh - 8rem);
+        height: 37vh;
+        scroll-margin-top: calc(63vh - 8rem);
     }
 }

@@ -48,6 +48,7 @@
     /* Header */
     --header-border: 4px solid var(--glow-10);
     --header-background: #040C11;
+    --header-background-transparent: #040c1100;
 }
 
 /* Mobile */

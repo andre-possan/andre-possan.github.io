@@ -46,6 +46,30 @@ function addItensAnimation(itens) {
     });
 }
 
+const sections = document.querySelectorAll('main section[id]');
+
+function activateMenuAtCurrentSection() {
+    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const checkpointStart = checkpoint >= sectionTop;
+        const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+    
+        if (checkpointStart && checkpointEnd) {
+            document
+                .querySelector('.header__nav__list__item .header__link[href*=' + sectionId + ']')
+                .classList.add('header__link--active')
+        } else {
+            document
+                .querySelector('.header__nav__list__item .header__link[href*=' + sectionId + ']')
+                .classList.remove('header__link--active')
+        }
+    });
+}
+
 mobileMenu.addEventListener("click", () => {
     openMenu(navList)
     addItensAnimation(navItens);
@@ -58,6 +82,7 @@ mobileMenu.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
+    activateMenuAtCurrentSection();
     if (window.scrollY > 20) {
         changeNavBackground("add");
     } else if (open == false) {
