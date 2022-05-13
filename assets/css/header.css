@@ -43,10 +43,6 @@
     transition: 500ms;
 }
 
-.header .button:hover {
-    text-decoration: none;
-}
-
 /* Mobile */
 @media screen and (min-width: 0px) {
     .header__box {
