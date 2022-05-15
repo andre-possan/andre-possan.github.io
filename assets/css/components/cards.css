@@ -22,7 +22,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    transition: 300ms;
+    transition: 300ms,
+    transform 1s;
 }
 
 .card:hover { 
