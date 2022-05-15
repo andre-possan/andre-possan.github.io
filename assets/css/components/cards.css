@@ -26,6 +26,18 @@
     transform 1s;
 }
 
+.card--animate-to-right {
+    animation: animateCardToRight 1s both;
+}
+
+.card--animate-to-left {
+    animation: animateCardToLeft 1s both;
+}
+
+.card--animate-to-top {
+    animation: animateCardToTop 1s both;
+}
+
 .card:hover { 
     transform: translateY(-5px);
     
@@ -265,6 +277,33 @@
 
     100% {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animateCardToRight {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateCardToLeft {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateCardToTop {
+    from {
+        transform: translateY(200px);
+    }
+    to {
         transform: translateY(0);
     }
 }

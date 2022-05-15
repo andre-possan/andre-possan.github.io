@@ -24,6 +24,7 @@
     --green: green;
     --blue: #1856ae;
     --white: white;
+    --transparent: #ffffff00;
 
     /* Text */
     --font-family: 'Jost', sans-serif;
@@ -48,7 +49,6 @@
     /* Header */
     --header-border: 4px solid var(--glow-10);
     --header-background: #040C11;
-    --header-background-transparent: #040c1100;
 }
 
 /* Mobile */

@@ -162,7 +162,7 @@
         content: '';
         width: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--glow-20), var(--header-background-transparent));
+        background: linear-gradient(90deg, var(--glow-20), var(--transparent));
         position: absolute;
         left: 0;
         bottom: -2.5px;
