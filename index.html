@@ -28,7 +28,7 @@
 <body>
     <header class="header">
         <div class="header__box container">
-            <h2 class="title title--two"><a href="#home" class="header__link">André Corso Possan</a></h2>
+            <h2 class="title title--two"><a href="#home">André Corso Possan</a></h2>
             <nav class="header__nav">
                 <ul class="header__nav__mobile-menu">
                     <li class="header__nav__mobile-menu__line"></li>
@@ -39,7 +39,7 @@
                     <li class="header__nav__list__item"><a href="#home" class="header__link">Home</a></li>
                     <li class="header__nav__list__item"><a href="#about" class="header__link">Sobre</a></li>
                     <li class="header__nav__list__item"><a href="#projects" class="header__link">Projetos</a></li>
-                    <li class="header__nav__list__item"><a href="#contact" class="header__link button">Contato</a></li>
+                    <li class="header__nav__list__item button"><a href="#contact" class="header__link">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -103,33 +103,29 @@
             </video>
         </section>
         <section class="information container">
-            <ul class="information__list">
-                <li class="information__list__card">
-                    <div class="information__list__card__icon information__list__card__icon--about-me"></div>
-                    <h4 class="information__list__card__title title">Sobre Mim</h4>
-                    <p class="information__list__card__paragraph paragraph">Me chamo André e meu objetivo é adquirir
+            <ul class="cards">
+                <li class="card card--second">
+                    <div class="card--second__icon card--second__icon--about-me"></div>
+                    <h4 class="card--second__title title">Sobre Mim</h4>
+                    <p class="paragraph">Me chamo André e meu objetivo é adquirir
                         mais conhecimentos sobre designer de páginas e programação Front-end, criando landing pages mais
                         bonitas e funcionais.</p>
                 </li>
-                <li class="information__list__card">
-                    <div class="information__list__card__icon information__list__card__icon--professional-experience">
+                <li class="card card--second">
+                    <div class="card--second__icon card--second__icon--professional-experience">
                     </div>
-                    <h4 class="information__list__card__title title">Experiência profissional</h4>
-                    <p class="information__list__card__paragraph paragraph">Estou estudando para alcançar uma vaga como
+                    <h4 class="card--second__title title">Experiência profissional</h4>
+                    <p class="paragraph">Estou estudando para alcançar uma vaga como
                         desenvolvedor Front-End.</p>
                 </li>
-                <li class="information__list__card">
-                    <div class="information__list__card__icon information__list__card__icon--study"></div>
-                    <h4 class="information__list__card__title title">Estudo</h4>
-                    <p class="information__list__card__paragraph paragraph">Atualmente estou matriculado no 2⁰ ano do
+                <li class="card card--second">
+                    <div class="card--second__icon card--second__icon--study"></div>
+                    <h4 class="card--second__title title">Estudo</h4>
+                    <p class="paragraph">Atualmente estou matriculado no 2⁰ ano do
                         ensino médio, e estudo programação na <a href="https://cursos.alura.com.br/user/andre-possan"
                             class="highlight highlight--alura" target="_blank">Alura</a>.</p>
                 </li>
             </ul>
-            <!-- <div class="information__item-animation">
-                <div class="information__item-animation__image"></div>
-                <div class="information__item-animation__image"></div>
-            </div> -->
         </section>
         <section class="about container" id="about">
             <div class="about__texts">
@@ -288,8 +284,9 @@
             </li>
         </ul>
     </footer>
-    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/header-navbar.js"></script>
     <script src="assets/js/introduction-typing.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>
