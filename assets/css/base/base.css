@@ -9,7 +9,17 @@ body {
     font-family: var(--font-family);
     font-size: var(--text-size);
     font-weight: var(--text-weight);
+
 }
+
+/* main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start;
+} */
 
 ::-webkit-scrollbar {
     background: var(--blue-30);
@@ -117,21 +127,6 @@ a {
 
 .highlight--vscode {
     color: var(--blue);
-}
-
-.circle-test {
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    background: red;
-    border-radius: 50%;
-    left: 50%;
-
-    z-index: 5;
-}
-
-.circle-test2 {
-    background: blue;
 }
 
 /* Mobile */

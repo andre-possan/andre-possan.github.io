@@ -3,9 +3,6 @@ const cards = document.querySelectorAll(".cards .card");
 const texts = document.querySelectorAll(".title--highlight, .paragraph");
 const dividers = document.querySelectorAll(".divider");
 
-const circleTest = document.querySelector(".circle-test");
-const circleTest2 = document.querySelector(".circle-test2");
-
 const directions = ["right", "top", "left"];
 
 window.addEventListener("load", () => {
@@ -20,12 +17,8 @@ function detectSection(section) {
     const checkpoint = window.pageYOffset + window.innerHeight;
     const checkpoint2 = window.pageYOffset;
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const checkpointStart = sectionTop <= checkpoint;
-    const checkpointEnd = sectionTop >= checkpoint2;
-
-    circleTest.style.top = `${checkpoint - 64}px`;
-    circleTest2.style.top = `${checkpoint2}px`;
+    const checkpointStart = sectionTop <= checkpoint - 100;
+    const checkpointEnd = sectionTop >= checkpoint2 - 100;
 
     if (checkpointStart && checkpointEnd) {
         return true;
@@ -41,20 +34,21 @@ function addAnimationOnCards(listsOfCards) {
         for (let i = 0; i < cards.length; i++) {
             const card = cards[i];
             const direction = directions[i];
+            const detectedSection = detectSection(card.parentNode);
 
-            if (detectSection(card.parentNode) && direction == "right") {
+            if (detectedSection && direction == "right") {
                 card.classList.add("card--animate-to-right");
             } else {
                 card.classList.remove("card--animate-to-right");
             }
 
-            if (detectSection(card.parentNode) && direction == "left") {
+            if (detectedSection && direction == "left") {
                 card.classList.add("card--animate-to-left");
             } else {
                 card.classList.remove("card--animate-to-left");
             }
 
-            if (detectSection(card.parentNode) && direction == "top") {
+            if (detectedSection && direction == "top") {
                 card.classList.add("card--animate-to-top");
             } else {
                 card.classList.remove("card--animate-to-top");
@@ -66,14 +60,15 @@ function addAnimationOnCards(listsOfCards) {
 function addAnimationOnTexs(texts) {
     for (let i = 0; i < texts.length; i++) {
         const text = texts[i];
+        const detectedSection = detectSection(text.parentNode);
 
-        if (detectSection(text.parentNode) && text.tagName == "P") {
+        if (detectedSection && text.tagName == "P") {
             text.classList.add("paragraph--animate");
         } else {
             text.classList.remove("paragraph--animate");
         }
 
-        if (detectSection(text.parentNode) && text.tagName == "H1") {
+        if (detectedSection && text.tagName == "H1") {
             text.classList.add("title--highlight--animate");
         } else {
             text.classList.remove("title--highlight--animate");
