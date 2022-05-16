@@ -3,7 +3,7 @@ const cards = document.querySelectorAll(".cards .card");
 const texts = document.querySelectorAll(".title--highlight, .paragraph");
 const dividers = document.querySelectorAll(".divider");
 
-const directions = ["right", "top", "left"];
+const cardsDirections = ["right", "top", "left"];
 
 window.addEventListener("load", () => {
     addAnimations();
@@ -33,22 +33,22 @@ function addAnimationOnCards(listsOfCards) {
 
         for (let i = 0; i < cards.length; i++) {
             const card = cards[i];
-            const direction = directions[i];
+            const cardDirection = cardsDirections[i];
             const detectedSection = detectSection(card.parentNode);
 
-            if (detectedSection && direction == "right") {
+            if (detectedSection && cardDirection == "right") {
                 card.classList.add("card--animate-to-right");
             } else {
                 card.classList.remove("card--animate-to-right");
             }
 
-            if (detectedSection && direction == "left") {
+            if (detectedSection && cardDirection == "left") {
                 card.classList.add("card--animate-to-left");
             } else {
                 card.classList.remove("card--animate-to-left");
             }
 
-            if (detectedSection && direction == "top") {
+            if (detectedSection && cardDirection == "top") {
                 card.classList.add("card--animate-to-top");
             } else {
                 card.classList.remove("card--animate-to-top");
