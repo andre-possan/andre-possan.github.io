@@ -9,7 +9,17 @@ body {
     font-family: var(--font-family);
     font-size: var(--text-size);
     font-weight: var(--text-weight);
+
 }
+
+/* main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start;
+} */
 
 ::-webkit-scrollbar {
     background: var(--blue-30);
@@ -56,6 +66,10 @@ a {
     transition: all 1s;
 }
 
+.title--highlight--animate {
+    animation: animateTitleHighlight 1s both;
+}
+
 .title--highlight:hover {
     text-shadow: 0px 0px 20px var(--glow-20);
 }
@@ -67,8 +81,11 @@ a {
 
 .divider {
     height: 2px;
-    width: 100%;
-    background: linear-gradient(90deg, var(--glow-10), var(--blue-10))
+    background: linear-gradient(90deg, var(--glow-10), var(--transparent))
+}
+
+.divider--animation {
+    animation: animateDivider 4s both;
 }
 
 .paragraph {
@@ -79,6 +96,10 @@ a {
 
     font-weight: var(--text-weigth-two);
     font-size: var(--text-size-two);
+}
+
+.paragraph--animate {
+    animation: animateParagraph 1s both;
 }
 
 .highlight {
@@ -144,5 +165,36 @@ a {
 @media screen and (min-width: 1441px) {
     .paragraph {
         max-width: 60vw;
+    }
+}
+
+@keyframes animateDivider {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes animateTitleHighlight {
+    from {
+        opacity: 0.5;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animateParagraph {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
