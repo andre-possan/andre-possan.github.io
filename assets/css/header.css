@@ -6,7 +6,7 @@
 
     z-index: 2;
 
-    transition: 100ms ease-in-out;
+    transition: 200ms ease-in-out;
 }
 
 .header__box {
@@ -38,7 +38,7 @@
 
     color: var(--text-10);
 
-    font-weight: var(--text-weigth-thee);
+    font-weight: var(--text-weigth-three);
 
     transition: 500ms;
 }
@@ -162,11 +162,8 @@
         content: '';
         width: 0;
         height: 3px;
-<<<<<<< HEAD
         background: linear-gradient(90deg, var(--glow-20), var(--header-background-transparent));
-=======
         background: linear-gradient(90deg, var(--glow-20), var(--transparent));
->>>>>>> updates
         position: absolute;
         left: 0;
         bottom: -2.5px;
@@ -189,11 +186,6 @@
         color: var(--glow-20);
         text-shadow: 0 5px 10px var(--glow-20);
     }
-}
-
-/* Laptop Large */
-@media screen and (min-width: 1025px) {
-    
 }
 
 @keyframes navLinkFade {

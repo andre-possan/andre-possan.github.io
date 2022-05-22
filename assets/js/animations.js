@@ -2,8 +2,16 @@ const listCards = document.querySelectorAll(".cards");
 const cards = document.querySelectorAll(".cards .card");
 const texts = document.querySelectorAll(".title--highlight, .paragraph");
 const dividers = document.querySelectorAll(".divider");
+const windowWidth = window.innerWidth;
 
-const cardsDirections = ["right", "top", "left"];
+
+const cardsClasses= [
+    "card--animate-one",
+    "card--animate-two",
+    "card--animate-three"
+];
+
+console.log(windowWidth);
 
 window.addEventListener("load", () => {
     addAnimations();
@@ -33,25 +41,13 @@ function addAnimationOnCards(listsOfCards) {
 
         for (let i = 0; i < cards.length; i++) {
             const card = cards[i];
-            const cardDirection = cardsDirections[i];
+            const cardClass = cardsClasses[i];
             const detectedSection = detectSection(card.parentNode);
 
-            if (detectedSection && cardDirection == "right") {
-                card.classList.add("card--animate-to-right");
+            if(detectedSection) {
+                card.classList.add(cardClass);
             } else {
-                card.classList.remove("card--animate-to-right");
-            }
-
-            if (detectedSection && cardDirection == "left") {
-                card.classList.add("card--animate-to-left");
-            } else {
-                card.classList.remove("card--animate-to-left");
-            }
-
-            if (detectedSection && cardDirection == "top") {
-                card.classList.add("card--animate-to-top");
-            } else {
-                card.classList.remove("card--animate-to-top");
+                card.classList.remove(cardClass);
             }
         }
     });

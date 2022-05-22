@@ -12,15 +12,6 @@ body {
 
 }
 
-/* main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
-section {
-    scroll-snap-align: start;
-} */
-
 ::-webkit-scrollbar {
     background: var(--blue-30);
 
@@ -105,7 +96,7 @@ a {
 .highlight {
     text-decoration: underline;
 
-    font-weight: var(--text-weigth-thee);
+    font-weight: var(--text-weigth-three);
 }
 
 .highlight--alura {
