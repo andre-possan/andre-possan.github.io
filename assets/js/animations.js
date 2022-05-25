@@ -2,16 +2,14 @@ const listCards = document.querySelectorAll(".cards");
 const cards = document.querySelectorAll(".cards .card");
 const texts = document.querySelectorAll(".title--highlight, .paragraph");
 const dividers = document.querySelectorAll(".divider");
-const windowWidth = window.innerWidth;
+const buttons = document.querySelectorAll(".button--second");
+const introductionContentBox = document.querySelector(".introduction__content-box");
 
-
-const cardsClasses= [
+const cardsClasses = [
     "card--animate-one",
     "card--animate-two",
     "card--animate-three"
 ];
-
-console.log(windowWidth);
 
 window.addEventListener("load", () => {
     addAnimations();
@@ -44,7 +42,7 @@ function addAnimationOnCards(listsOfCards) {
             const cardClass = cardsClasses[i];
             const detectedSection = detectSection(card.parentNode);
 
-            if(detectedSection) {
+            if (detectedSection) {
                 card.classList.add(cardClass);
             } else {
                 card.classList.remove(cardClass);
@@ -53,21 +51,44 @@ function addAnimationOnCards(listsOfCards) {
     });
 }
 
+function addAnimationFadeTo(parameter, direction, element) {
+    const elementClass = "animate-fade-to-" + direction;
+    
+    if (parameter == "add") {
+        element.classList.add(elementClass);
+    } else if (parameter == "remove") {
+        element.classList.remove(elementClass);
+    }
+}
+
 function addAnimationOnTexs(texts) {
     for (let i = 0; i < texts.length; i++) {
         const text = texts[i];
         const detectedSection = detectSection(text.parentNode);
 
         if (detectedSection && text.tagName == "P") {
-            text.classList.add("paragraph--animate");
+            addAnimationFadeTo("add", "top", text);
         } else {
-            text.classList.remove("paragraph--animate");
+            addAnimationFadeTo("remove", "top", text);
         }
 
         if (detectedSection && text.tagName == "H1") {
-            text.classList.add("title--highlight--animate");
+            addAnimationFadeTo("add", "right", text);
         } else {
-            text.classList.remove("title--highlight--animate");
+            addAnimationFadeTo("remove", "right", text);
+        }
+    }
+}
+
+function addAnimationOnButtons(buttons){
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        const detectedSection = detectSection(button.parentNode);
+
+        if(detectedSection) {
+            addAnimationFadeTo("add", "left", button);
+        } else {
+            addAnimationFadeTo("remove", "left", button);
         }
     }
 }
@@ -84,8 +105,11 @@ function addAnimationOnDividers(dividers) {
     }
 }
 
+
+
 function addAnimations() {
     addAnimationOnCards(listCards, cards);
     addAnimationOnTexs(texts);
     addAnimationOnDividers(dividers);
+    addAnimationOnButtons(buttons);
 }

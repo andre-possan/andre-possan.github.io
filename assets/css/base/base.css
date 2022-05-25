@@ -57,10 +57,6 @@ a {
     transition: all 1s;
 }
 
-.title--highlight--animate {
-    animation: animateTitleHighlight 1s both;
-}
-
 .title--highlight:hover {
     text-shadow: 0px 0px 20px var(--glow-20);
 }
@@ -87,10 +83,6 @@ a {
 
     font-weight: var(--text-weigth-two);
     font-size: var(--text-size-two);
-}
-
-.paragraph--animate {
-    animation: animateParagraph 1s both;
 }
 
 .highlight {
@@ -168,7 +160,26 @@ a {
     }
 }
 
-@keyframes animateTitleHighlight {
+.animate-fade-to-top {
+    animation: animateFadeToTop 1s both;
+}
+
+@keyframes animateFadeToTop {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-to-right {
+    animation: animateFadeToRight 1s both;
+}
+
+@keyframes animateFadeToRight {
     from {
         opacity: 0.5;
         transform: translateX(-200px);
@@ -179,10 +190,29 @@ a {
     }
 }
 
-@keyframes animateParagraph {
+.animate-fade-to-left {
+    animation: animateFadeToLeft 1s both;
+}
+
+@keyframes animateFadeToLeft {
     from {
-        opacity: 0;
-        transform: translateY(100px);
+        opacity: 0.5;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-to-bottom {
+    animation: animateFadeTobottom 1s both;
+}
+
+@keyframes animateFadeTobottom {
+    from {
+        opacity: 0.5;
+        transform: translateY(-200px);
     }
     to {
         opacity: 1;

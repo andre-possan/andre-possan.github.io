@@ -22,8 +22,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    transition: 300ms,
-    transform 1s;
+    transition: 300ms;
 }
 
 .card--animate-one {
@@ -39,7 +38,7 @@
 }
 
 .card:hover { 
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     
     box-shadow: var(--card-shadow) var(--glow-20);
 }
@@ -261,25 +260,16 @@
         from {
             transform: translateX(-200px);
         }
-        to {
-            transform: translateX(0);
-        }
     }
     
     @keyframes animateCardTwo {
         from {
             transform: translateX(200px);
         }
-        to {
-            transform: translateX(0);
-        }
     }
     @keyframes animateCardThree {
         from {
             transform: translateY(200px);
-        }
-        to {
-            transform: translateY(0);
         }
     }
 }
@@ -299,17 +289,11 @@
         from {
             transform: translateY(200px);
         }
-        to {
-            transform: translateY(0);
-        }
     }
     
     @keyframes animateCardThree {
         from {
             transform: translateX(200px);
-        }
-        to {
-            transform: translateX(0);
         }
     }
 }
