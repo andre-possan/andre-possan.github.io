@@ -22,7 +22,7 @@
     justify-content: space-evenly;
 }
 
-.contact__button__icon {
+.contact__button-icon {
     width: 1.5rem;
     height: 1.5rem;
     margin-right: .5rem;
@@ -36,7 +36,7 @@
 }
 
 .contact__button:hover
-.contact__button__icon {
+.contact__button-icon {
     background-image: url(../img/icons/email2-green.svg);
 }
 

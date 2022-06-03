@@ -37,10 +37,8 @@
     animation: animateCardThree 1s both;
 }
 
-.card:hover { 
-    /* transform: translateY(-5px); */
-    
-    box-shadow: var(--card-shadow) var(--glow-20);
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card__content {
@@ -58,7 +56,7 @@
     transition: 500ms;
 }
 
-.card__content__without-title {
+.card__content-without-title {
     display: flex;
     flex-direction: column;
 
@@ -97,19 +95,19 @@
     margin: 2rem 0;
 }
 
-.card__technologies__title {
+.card__technologies-title {
     font-weight: var(--text-weigth-two);
 
     margin-bottom: 1rem;
 }
 
-.card__technologies__list {
+.card__technologies-list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.card__technologies__list__item {
+.card__technologies-list-item {
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -119,23 +117,23 @@
     transition: 300ms;
 }
 
-.card__technologies__list__item:hover {
+.card__technologies-list-item:hover {
     transform: translateY(-5px);
 }
 
-.card__technologies__list__item--html {
+.card__technologies-list-item--html {
     background-image: url(../../img/icons/html.svg);
 }
 
-.card__technologies__list__item--css {
+.card__technologies-list-item--css {
     background-image: url(../../img/icons/css.svg);
 }
 
-.card__technologies__list__item--js {
+.card__technologies-list-item--js {
     background-image: url(../../img/icons/js.svg);
 }
 
-.card__technologies__list__item--nodejs {
+.card__technologies-list-item--nodejs {
     background-image: url(../../img/icons/nodejs.svg);
 }
 
@@ -227,7 +225,7 @@
         height: calc(100% - 2rem);
     }
 
-    .card__content__without-title {
+    .card__content-without-title {
         opacity: 1;
     }
 }
@@ -244,7 +242,7 @@
         height: 10%;
     }
 
-    .card__content__without-title {
+    .card__content-without-title {
         opacity: 0;
     }
     
@@ -252,7 +250,7 @@
         height: calc(100% - 2rem);
     }
     
-    .card:hover .card__content__without-title {
+    .card:hover .card__content-without-title {
         animation: cardTextFade 600ms forwards;
     }
     

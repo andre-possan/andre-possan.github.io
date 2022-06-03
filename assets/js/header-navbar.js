@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
-const mobileMenu = document.querySelector(".header__nav__mobile-menu");
-const navList = document.querySelector(".header__nav__list");
-const navItens = document.querySelectorAll(".header__nav__list__item");
+const mobileMenu = document.querySelector(".header__mobile-menu");
+const navList = document.querySelector(".header__menu");
+const navItens = document.querySelectorAll(".header__menu-item");
 
 function changeNavBackground(attribute) {
     const classHeader = "header--highlight";
@@ -60,11 +60,11 @@ function activateMenuAtCurrentSection() {
     
         if (checkpointStart && checkpointEnd) {
             document
-                .querySelector('.header__nav__list__item .header__link[href*=' + sectionId + ']')
+                .querySelector('.header__menu-item .header__link[href*=' + sectionId + ']')
                 .classList.add('header__link--active')
         } else {
             document
-                .querySelector('.header__nav__list__item .header__link[href*=' + sectionId + ']')
+                .querySelector('.header__menu-item .header__link[href*=' + sectionId + ']')
                 .classList.remove('header__link--active')
         }
     });

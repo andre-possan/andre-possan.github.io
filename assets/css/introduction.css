@@ -53,7 +53,7 @@
     justify-content: space-evenly;
 }
 
-.introduction__list__item__icon {
+.introduction__list-item-icon {
     width: 45px;
     height: 45px;
 
@@ -62,11 +62,11 @@
     transition: 200ms;
 }
 
-.introduction__list .introduction__list__item:last-child .introduction__list__item__icon {
+.introduction__list .introduction__list-item:last-child .introduction__list-item-icon {
     margin: 0;
 }
 
-.introduction__list__item__icon:hover {
+.introduction__list-item-icon:hover {
     transform: translateY(-5px);
 }
 
