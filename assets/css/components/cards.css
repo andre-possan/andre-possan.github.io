@@ -9,8 +9,6 @@
 .card {
     box-sizing: border-box;
 
-    height: 50vh;
-
     padding: 1rem 1.5rem;
 
     border-left: var(--card-border) var(--glow-20);
@@ -160,7 +158,8 @@
     flex-direction: column;
     align-items: center;
 
-    box-shadow: 15px 15px 25px var(--blue-10-neumorphism1),
+    box-shadow:
+        15px 15px 25px var(--blue-10-neumorphism1),
         -15px -15px 25px var(--blue-10-neumorphism2);
 
     padding: 2rem 1rem;
@@ -170,12 +169,22 @@
     background:
         linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
         linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)) border-box;
+
     border-radius: 1rem;
     border: 4px solid transparent;
 
-    transition: --gradient-color1 1s,
+    transition:
+        --gradient-color1 1s,
         --gradient-color2 1s,
         all 1s;
+}
+
+.card--second:hover {
+    border-radius: 2rem;
+    --gradient-color1: blue;
+    --gradient-color2: red;
+
+    box-shadow: none;
 }
 
 .card--second__icon {
@@ -202,14 +211,6 @@
     font-size: var(--title-size-two);
 }
 
-.card--second:hover {
-    border-radius: 2rem;
-    --gradient-color1: blue;
-    --gradient-color2: red;
-
-    box-shadow: none;
-}
-
 /* Mobile */
 @media screen and (min-width: 0px) {
     .card {
@@ -234,7 +235,6 @@
 @media screen and (min-width: 769px) {
     .card {
         width: 45%;
-
         height: inherit;
     }
 

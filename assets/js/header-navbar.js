@@ -19,7 +19,6 @@ function openMenu(navList) {
         navList.classList.add("active");
         mobileMenu.classList.add("active");
 
-        
         navList.classList.add("header__background--highlight");
         changeNavBackground("add");
 
@@ -28,7 +27,7 @@ function openMenu(navList) {
         navList.classList.remove("active");
         mobileMenu.classList.remove("active");
 
-        if(window.scrollY < 20) {
+        if (window.scrollY < 20) {
             changeNavBackground("remove");
         }
 
@@ -46,40 +45,40 @@ function addItensAnimation(itens) {
     });
 }
 
-const sections = document.querySelectorAll('main section[id]');
+const sections = document.querySelectorAll("main section[id]");
 
 function activateMenuAtCurrentSection() {
     const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
 
-    sections.forEach(section => {
+    sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+        const sectionId = section.getAttribute("id");
         const checkpointStart = checkpoint >= sectionTop;
         const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
-    
+
         if (checkpointStart && checkpointEnd) {
             document
-                .querySelector('.header__menu-item .header__link[href*=' + sectionId + ']')
-                .classList.add('header__link--active')
+                .querySelector(".header__menu-item .header__link[href*=" + sectionId + "]")
+                .classList.add("header__link--active");
         } else {
             document
-                .querySelector('.header__menu-item .header__link[href*=' + sectionId + ']')
-                .classList.remove('header__link--active')
+                .querySelector(".header__menu-item .header__link[href*=" + sectionId + "]")
+                .classList.remove("header__link--active");
         }
     });
 }
 
 mobileMenu.addEventListener("click", () => {
-    openMenu(navList)
+    openMenu(navList);
     addItensAnimation(navItens);
 
-    if(open == true) {
+    if (open == true) {
         header.classList.add("header--border-none");
     } else {
         header.classList.remove("header--border-none");
     }
-})
+});
 
 window.addEventListener("scroll", () => {
     activateMenuAtCurrentSection();
@@ -88,4 +87,4 @@ window.addEventListener("scroll", () => {
     } else if (open == false) {
         changeNavBackground("remove");
     }
-})
+});

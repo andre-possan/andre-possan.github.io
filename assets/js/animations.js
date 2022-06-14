@@ -5,19 +5,15 @@ const dividers = document.querySelectorAll(".divider");
 const buttons = document.querySelectorAll(".button--second");
 const introductionContentBox = document.querySelector(".introduction__content-box");
 
-const cardsClasses = [
-    "card--animate-one",
-    "card--animate-two",
-    "card--animate-three"
-];
+const cardsClasses = ["card--animate-one", "card--animate-two", "card--animate-three"];
 
 window.addEventListener("load", () => {
     addAnimations();
-})
+});
 
 window.addEventListener("scroll", () => {
     addAnimations();
-})
+});
 
 function detectSection(section) {
     const checkpoint = window.pageYOffset + window.innerHeight;
@@ -34,7 +30,7 @@ function detectSection(section) {
 }
 
 function addAnimationOnCards(listsOfCards) {
-    listsOfCards.forEach(listOfCards => {
+    listsOfCards.forEach((listOfCards) => {
         const cards = listOfCards.querySelectorAll(".card");
 
         for (let i = 0; i < cards.length; i++) {
@@ -53,7 +49,7 @@ function addAnimationOnCards(listsOfCards) {
 
 function addAnimationFadeTo(parameter, direction, element) {
     const elementClass = "animate-fade-to-" + direction;
-    
+
     if (parameter == "add") {
         element.classList.add(elementClass);
     } else if (parameter == "remove") {
@@ -80,12 +76,12 @@ function addAnimationOnTexs(texts) {
     }
 }
 
-function addAnimationOnButtons(buttons){
+function addAnimationOnButtons(buttons) {
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
         const detectedSection = detectSection(button.parentNode);
 
-        if(detectedSection) {
+        if (detectedSection) {
             addAnimationFadeTo("add", "left", button);
         } else {
             addAnimationFadeTo("remove", "left", button);
@@ -104,8 +100,6 @@ function addAnimationOnDividers(dividers) {
         }
     }
 }
-
-
 
 function addAnimations() {
     addAnimationOnCards(listCards, cards);
