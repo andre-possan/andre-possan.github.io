@@ -15,11 +15,11 @@
     border-radius: var(--card-border-radius);
 
     cursor: default;
-    
+
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     transition: 300ms;
 }
 
@@ -46,7 +46,7 @@
     height: 100%;
 
     padding: 1rem;
-    
+
     border-radius: 10px;
     background: var(--blue-10-transparent);
     backdrop-filter: blur(5px);
@@ -141,14 +141,19 @@
     margin-top: 1rem;
 }
 
+:root {
+    --gradient-color1: #82f9a1;
+    --gradient-color2: green;
+}
+
 @property --gradient-color1 {
-    syntax: '<color>';
-    initial-value: #82F9A1;
+    syntax: "<color>";
+    initial-value: #82f9a1;
     inherits: false;
 }
 
 @property --gradient-color2 {
-    syntax: '<color>';
+    syntax: "<color>";
     initial-value: green;
     inherits: false;
 }
@@ -158,29 +163,23 @@
     flex-direction: column;
     align-items: center;
 
-    box-shadow:
-        15px 15px 25px var(--blue-10-neumorphism1),
-        -15px -15px 25px var(--blue-10-neumorphism2);
+    box-shadow: 15px 15px 25px var(--blue-10-neumorphism1), -15px -15px 25px var(--blue-10-neumorphism2);
 
     padding: 2rem 1rem;
 
     text-align: center;
 
-    background:
-        linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
+    background: linear-gradient(var(--blue-10), var(--blue-10)) padding-box,
         linear-gradient(to right, var(--gradient-color1), var(--gradient-color2)) border-box;
 
     border-radius: 1rem;
     border: 4px solid transparent;
 
-    transition:
-        --gradient-color1 1s,
-        --gradient-color2 1s,
-        all 1s;
+    transition: --gradient-color1 1s, --gradient-color2 1s, all 400ms;
 }
 
 .card--second:hover {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     --gradient-color1: blue;
     --gradient-color2: red;
 
@@ -218,7 +217,7 @@
         height: 100%;
     }
 
-    .card:nth-last-child(n+2) {
+    .card:nth-last-child(n + 2) {
         margin-bottom: 2rem;
     }
 
@@ -245,21 +244,21 @@
     .card__content-without-title {
         opacity: 0;
     }
-    
+
     .card:hover .card__content {
         height: calc(100% - 2rem);
     }
-    
+
     .card:hover .card__content-without-title {
         animation: cardTextFade 600ms forwards;
     }
-    
+
     @keyframes animateCardOne {
         from {
             transform: translateX(-200px);
         }
     }
-    
+
     @keyframes animateCardTwo {
         from {
             transform: translateX(200px);
@@ -278,17 +277,16 @@
         width: 30%;
     }
 
-    .card:nth-last-child(n+2) {
+    .card:nth-last-child(n + 2) {
         margin-bottom: 0;
     }
 
-    
     @keyframes animateCardTwo {
         from {
             transform: translateY(200px);
         }
     }
-    
+
     @keyframes animateCardThree {
         from {
             transform: translateX(200px);

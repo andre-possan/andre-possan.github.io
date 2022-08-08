@@ -7,13 +7,13 @@ const introductionContentBox = document.querySelector(".introduction__content-bo
 
 const cardsClasses = ["card--animate-one", "card--animate-two", "card--animate-three"];
 
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => {
     addAnimations();
 });
 
 window.addEventListener("scroll", () => {
     addAnimations();
-});
+}); */
 
 function detectSection(section) {
     const checkpoint = window.pageYOffset + window.innerHeight;
